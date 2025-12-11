@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <title>Zlottour Raffle — Compete &amp; Win Big Every Week</title>
+  <meta name="description" content="Compete weekly with Zlottour Raffle. Up to $154,000 cash prizes, current $3,780 licensed draw with 995 tickets at $10, draw on Dec 26, 2025. 18+ responsible play.">
+  <meta property="og:title" content="Zlottour Raffle — Compete &amp; Win Big Every Week">
+  <meta property="og:description" content="Licensed raffle: up to $154,000 cash prizes weekly. Current $3,780 draw, 995 tickets at $10, draw Dec 26, 2025. 18+ responsible play.">
+  <meta property="og:image" content="/assets/herobackground02.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zlottour.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/assets/herobackground02.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+:root{
+  --bg: #0d0b21;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #e8e9ff;
+  --muted: #c6c8e6;
+  --heading: #ffffff;
+  --accent: #f6d65b;
+  --secondary: #9a7bff;
+  --primary: #130f2e;
+  --border: rgba(255,255,255,0.14);
+  --radius: 16px;
+  --shadow: 0 24px 70px rgba(0,0,0,0.55);
+  --font-display: "Bebas Neue", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(154,123,255,0.16), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(246,214,91,0.12), transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(108,205,255,0.14), transparent 30%),
+    linear-gradient(145deg, #0a0819 0%, #0d0a24 40%, #0f0c2c 100%);
+  color:var(--text);
+  line-height:1.65;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none; transition:color .18s ease, opacity .18s ease}
+a:hover{color:var(--secondary); opacity:0.92}
+img{max-width:100%; display:block}
+
+.container{width:min(1180px, 100% - 2.4rem); margin:0 auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:80;
+  background:rgba(10,8,25,0.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 8px 30px rgba(0,0,0,0.35);
+}
+.nav-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0.9rem 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+}
+.brand img{
+  width:132px;
+  border-radius:12px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.45);
+}
+.brand-name{
+  font-family:var(--font-display);
+  letter-spacing:2px;
+  font-size:1.6rem;
+  color:var(--heading);
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:0.8rem;
+}
+.nav-links a{
+  color:var(--text);
+  font-weight:600;
+  padding:0.45rem 0.75rem;
+  border-radius:12px;
+  transition:background .15s ease, color .15s ease;
+}
+.nav-links a:hover{background:var(--panel); color:var(--accent)}
+.nav-links .btn{
+  padding:0.6rem 0.9rem;
+  font-size:0.95rem;
+  white-space:nowrap;
+}
+.menu-toggle{
+  display:none;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--text);
+  padding:0.55rem 0.75rem;
+  border-radius:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.45rem;
+  padding:0.78rem 1.6rem;
+  border-radius:12px;
+  font-weight:700;
+  white-space:nowrap;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+.btn.primary{
+  background:linear-gradient(135deg, var(--secondary), var(--accent));
+  color:#0b0920;
+  box-shadow:0 12px 36px rgba(0,0,0,0.35);
+}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{
+  background:var(--panel);
+  border-color:var(--border);
+  color:var(--text);
+}
+.btn.ghost:hover{color:var(--accent)}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(2.5rem, 6vw, 4.8rem) 0 clamp(3rem, 7vw, 5.6rem);
+}
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:0.35;
+  z-index:0;
+}
+.hero::before{top:-120px; left:-60px; background:radial-gradient(circle, rgba(154,123,255,0.45), transparent 60%)}
+.hero::after{bottom:-140px; right:-20px; background:radial-gradient(circle, rgba(246,214,91,0.4), transparent 60%)}
+.hero-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:2.2rem;
+  align-items:center;
+}
+.hero-copy .eyebrow{
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:0.85rem;
+  color:var(--muted);
+  margin:0 0 0.4rem;
+}
+.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing:1px;
+  margin:0 0 0.6rem;
+  color:var(--heading);
+}
+.hero-prize-stack{display:flex; flex-direction:column; gap:0.25rem; margin:0 0 0.8rem}
+.hero-prize{
+  display:inline-block;
+  font-family:var(--font-display);
+  font-size:clamp(2.6rem, 6vw, 4.4rem);
+  color:var(--accent);
+  letter-spacing:1px;
+  text-shadow:0 6px 28px rgba(0,0,0,0.4);
+}
+.hero-prize-sub{
+  font-size:clamp(1.3rem, 3vw, 2rem);
+  font-weight:800;
+  letter-spacing:1px;
+  color:var(--heading);
+}
+.hero-sub{
+  margin:0 0 1rem;
+  color:var(--muted);
+  max-width:720px;
+}
+.hero-cta{display:flex; gap:0.8rem; flex-wrap:wrap; margin:1rem 0 0.8rem}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+  padding:0.42rem 0.9rem;
+  border-radius:999px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  color:var(--muted);
+  font-weight:600;
+  font-size:0.95rem;
+}
+.pill.accent{background:rgba(246,214,91,0.14); color:var(--accent); border-color:rgba(246,214,91,0.35)}
+.badges{display:flex; flex-wrap:wrap; gap:0.6rem; margin:0.2rem 0 1.1rem}
+
+.countdown-card{
+  margin-top:1.4rem;
+  background:linear-gradient(135deg, rgba(154,123,255,0.14), rgba(246,214,91,0.08));
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1rem 1.2rem;
+  box-shadow:var(--shadow);
+}
+.countdown-title{font-weight:700; color:var(--heading); margin:0 0 0.6rem}
+.countdown{display:flex; gap:0.8rem; flex-wrap:wrap}
+.countdown .slot{
+  flex:1 1 120px;
+  min-width:120px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  text-align:center;
+  padding:0.8rem 0.6rem;
+}
+.countdown .value{display:block; font-family:var(--font-display); font-size:2.4rem; color:var(--accent)}
+.countdown small{display:block; color:var(--muted); letter-spacing:1px; text-transform:uppercase; font-weight:700}
+
+.hero-visual{
+  position:relative;
+  background:linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:1.2rem;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.hero-visual .halo{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 40% 30%, rgba(246,214,91,0.22), transparent 60%);
+  filter:blur(30px);
+  z-index:0;
+}
+.hero-visual img{position:relative; z-index:1; border-radius:14px; box-shadow:0 16px 44px rgba(0,0,0,0.55)}
+.hero-label{position:absolute; top:14px; right:14px; z-index:2; background:rgba(10,8,25,0.8); border:1px solid var(--border); padding:0.4rem 0.8rem; border-radius:999px; color:var(--muted); font-weight:700}
+
+.section-head{text-align:center; margin-bottom:1.6rem}
+.section-eyebrow{text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin:0; font-size:0.9rem}
+.section-title{font-family:var(--font-display); font-size:clamp(1.9rem, 4vw, 2.6rem); color:var(--heading); margin:0.25rem 0}
+.section-sub{margin:0; color:var(--muted)}
+
+.packages{padding:3.2rem 0 2.6rem}
+.package-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem}
+.package-card{position:relative; background:linear-gradient(155deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border:1px solid var(--border); border-radius:16px; padding:1.2rem; box-shadow:var(--shadow); overflow:hidden; transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease}
+.package-card:hover{transform:translateY(-4px); border-color:rgba(246,214,91,0.4); box-shadow:0 18px 48px rgba(0,0,0,0.55)}
+.package-card .ribbon{position:absolute; top:12px; right:12px; background:var(--accent); color:#0b0920; padding:0.32rem 0.7rem; border-radius:999px; font-weight:800; letter-spacing:0.5px}
+.package-name{margin:0 0 0.3rem; font-size:1.15rem; color:var(--heading); font-weight:800}
+.package-value{font-family:var(--font-display); font-size:2.6rem; color:var(--secondary); margin:0}
+.package-note{margin:0 0 0.8rem; color:var(--muted)}
+.package-list{list-style:none; padding:0; margin:0 0 1rem; color:var(--text)}
+.package-list li{display:flex; align-items:center; gap:0.45rem; margin:0.3rem 0; color:var(--muted)}
+.package-list li i{color:var(--accent)}
+.grand-prize-wrap{display:grid; grid-template-columns:1.2fr 0.8fr; gap:1.2rem; align-items:stretch}
+.grand-card{position:relative; padding:1.6rem; border-radius:18px; background:radial-gradient(circle at 20% 20%, rgba(246,214,91,0.16), transparent 50%), radial-gradient(circle at 90% 10%, rgba(154,123,255,0.14), transparent 40%), linear-gradient(155deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); border:1px solid var(--border); box-shadow:var(--shadow); overflow:hidden}
+.grand-card::after{content:""; position:absolute; inset:0; background:radial-gradient(circle at 70% 80%, rgba(154,123,255,0.14), transparent 50%); pointer-events:none}
+.grand-card h3{margin:0 0 0.45rem; color:var(--heading); font-size:1.4rem}
+.grand-card .value{font-family:var(--font-display); font-size:3rem; color:var(--accent); margin:0 0 0.3rem; letter-spacing:1px}
+.grand-card .sub{color:var(--muted); margin:0 0 0.9rem; font-weight:600}
+.grand-card .pitch{color:var(--text); font-weight:700; margin:0 0 1rem}
+.cta-stack{display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center}
+.btn.fun{padding:1rem 2.1rem; font-size:1.05rem; background:linear-gradient(120deg, var(--accent), var(--secondary)); color:#0b0920; box-shadow:0 16px 40px rgba(0,0,0,0.5); border:1px solid rgba(246,214,91,0.6)}
+.btn.fun:hover{transform:translateY(-3px) scale(1.01); box-shadow:0 20px 48px rgba(0,0,0,0.58)}
+.stat-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:0.7rem; height:100%}
+.stat-box{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:1rem; box-shadow:var(--shadow); text-align:left}
+.stat-box .label{color:var(--muted); font-weight:700; letter-spacing:0.5px; text-transform:uppercase; font-size:0.85rem; margin:0 0 0.35rem}
+.stat-box .num{font-family:var(--font-display); font-size:2.1rem; color:var(--accent); margin:0}
+.stat-box .hint{color:var(--muted); margin:0.2rem 0 0}
+
+.regulatory{padding:2.6rem 0}
+.reg-card{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.2rem; box-shadow:var(--shadow); margin-bottom:1rem}
+.reg-card h3{margin:0 0 0.4rem; color:var(--heading)}
+.reg-card p{margin:0 0 0.6rem; color:var(--muted)}
+.res-links{display:flex; flex-wrap:wrap; gap:0.6rem; margin:0; padding:0; list-style:none}
+.res-links a{color:var(--accent); font-weight:600}
+.res-links a:hover{color:var(--secondary)}
+.rg-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:1rem; margin-top:1.2rem}
+.rg-card{position:relative; background:linear-gradient(150deg, rgba(154,123,255,0.12), rgba(246,214,91,0.08)); border:1px solid var(--border); border-radius:18px; padding:1.2rem; box-shadow:var(--shadow); overflow:hidden}
+.rg-card::after{content:""; position:absolute; inset:0; background:radial-gradient(circle at 80% 20%, rgba(246,214,91,0.16), transparent 55%); opacity:0.7; pointer-events:none}
+.rg-icon{width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:12px; background:rgba(246,214,91,0.16); color:var(--accent); border:1px solid rgba(246,214,91,0.35); margin-bottom:0.6rem; box-shadow:0 10px 28px rgba(0,0,0,0.35)}
+.rg-card h3{margin:0 0 0.35rem; color:var(--heading)}
+.rg-card p{margin:0 0 0.6rem; color:var(--muted); font-weight:600}
+.rg-badge-pill{display:inline-flex; align-items:center; gap:0.35rem; background:rgba(255,255,255,0.05); border:1px solid var(--border); padding:0.35rem 0.75rem; border-radius:999px; font-weight:700; color:var(--muted); margin:0.25rem 0}
+.rg-cta{display:inline-flex; align-items:center; gap:0.4rem; padding:0.85rem 1.4rem; border-radius:12px; background:linear-gradient(120deg, var(--accent), var(--secondary)); color:#0b0920; font-weight:800; box-shadow:0 14px 36px rgba(0,0,0,0.5); border:1px solid rgba(246,214,91,0.5)}
+.rg-cta:hover{transform:translateY(-2px); color:#0b0920}
+
+.contact{padding:3rem 0 3.4rem}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; align-items:start}
+.contact-card,.contact-form-card{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.2rem; box-shadow:var(--shadow)}
+.contact-card h3{margin:0 0 0.4rem; color:var(--heading)}
+.contact-card p{margin:0.2rem 0; color:var(--muted)}
+.contact-card strong{color:var(--heading)}
+.contact-form-card form{display:flex; flex-direction:column; gap:0.75rem}
+.contact-form-card input,.contact-form-card textarea{width:100%; padding:0.85rem 0.95rem; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,0.03); color:var(--text); font-size:1rem; transition:border .16s ease, box-shadow .16s ease}
+.contact-form-card input:focus,.contact-form-card textarea:focus{outline:none; border-color:rgba(154,123,255,0.5); box-shadow:0 0 0 3px rgba(154,123,255,0.18)}
+.form-status{min-height:20px; color:var(--muted)}
+.form-status.success{color:#9ff2c0}
+.form-status.error{color:#ff9b73}
+
+.footer{background:linear-gradient(180deg, #0a0718, #080615); border-top:1px solid var(--border); padding:3rem 0 2.2rem}
+.footer-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.2rem; margin-bottom:1.6rem}
+.footer h4{margin:0 0 0.5rem; color:var(--heading)}
+.footer p{margin:0; color:var(--muted)}
+.footer ul{list-style:none; padding:0; margin:0}
+.footer li{margin:0.35rem 0}
+.footer-copy{text-align:center; color:var(--muted); margin:0}\n.footer-rg{margin:1.2rem 0; background:var(--panel-strong); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:16px; padding:1.1rem; display:grid; grid-template-columns:auto 1fr; gap:0.9rem; align-items:center; box-shadow:var(--shadow);}\n.footer-rg .rg-badge{background:rgba(246,214,91,0.14); color:var(--accent); font-weight:800; padding:0.6rem 0.9rem; border-radius:12px; border:1px solid rgba(246,214,91,0.4); text-transform:uppercase; letter-spacing:1px;}\n.footer-rg .rg-text{color:var(--muted); line-height:1.5; font-weight:600;}\n.footer-rg .rg-warning{color:var(--heading); font-weight:800; display:block; margin:0.15rem 0;}
+
+.sticky-ribbon{position:fixed; bottom:12px; left:50%; transform:translateX(-50%); background:rgba(12,10,30,0.9); border:1px solid var(--border); border-radius:999px; padding:0.55rem 1rem; display:flex; align-items:center; gap:0.8rem; box-shadow:0 12px 30px rgba(0,0,0,0.45); backdrop-filter:blur(10px); z-index:60; flex-wrap:wrap}
+.sticky-ribbon .item{display:flex; align-items:center; gap:0.35rem; color:var(--muted); font-weight:600}
+.sticky-ribbon .item i{color:var(--accent)}
+
+.scroll-top{position:fixed; right:18px; bottom:70px; width:46px; height:46px; border-radius:50%; border:none; background:var(--accent); color:#0b0920; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 14px 34px rgba(0,0,0,0.55); opacity:0; visibility:hidden; transition:all .16s; z-index:65}
+.scroll-top.show{opacity:1; visibility:visible}
+.scroll-top:hover{background:var(--secondary); color:#fff}
+
+.zlottour-modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.78); backdrop-filter:blur(8px); z-index:120; padding:1rem}
+.zlottour-modal.active{display:flex}
+.modal-card{background:linear-gradient(155deg, #110d24, #0c0a1c); border:1px solid var(--border); border-radius:18px; width:min(520px, 100%); padding:1.4rem; color:var(--text); position:relative; box-shadow:var(--shadow)}
+.modal-card h3{margin:0 0 0.3rem; font-family:var(--font-display); font-size:2rem}
+.modal-card p{margin:0 0 0.8rem; color:var(--muted)}
+.modal-close{position:absolute; top:12px; right:12px; background:var(--panel); border:1px solid var(--border); color:var(--muted); border-radius:10px; padding:0.4rem 0.6rem; cursor:pointer}
+.modal-form{display:flex; flex-direction:column; gap:0.7rem}
+.modal-form input{padding:0.85rem 0.95rem; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,0.03); color:var(--text)}
+.modal-form input:focus{outline:none; border-color:rgba(246,214,91,0.4); box-shadow:0 0 0 3px rgba(246,214,91,0.15)}
+.modal-status{min-height:22px; color:var(--muted); font-weight:600}
+.modal-status.success{color:#9ff2c0}
+.modal-status.error{color:#ff9b73}
+
+.sticky-footer{position:fixed; bottom:0; left:0; right:0; background:rgba(10,8,25,0.92); border-top:1px solid var(--border); backdrop-filter:blur(10px); z-index:70; padding:0.65rem 0}
+.sticky-footer .container{display:flex; align-items:center; gap:1rem; justify-content:center; flex-wrap:wrap; font-weight:700; color:var(--muted)}
+.sticky-footer .badge{display:flex; align-items:center; gap:0.35rem; background:var(--panel); border:1px solid var(--border); padding:0.45rem 0.8rem; border-radius:12px}
+
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+
+@media (max-width: 960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1}
+  .nav-links{position:absolute; left:0; right:0; top:100%; background:rgba(10,8,25,0.96); padding:0.8rem 1.2rem 1rem; flex-direction:column; align-items:flex-start; border-bottom:1px solid var(--border); display:none}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:inline-flex}
+}
+@media (max-width: 720px){
+  .countdown .slot{min-width:48%}
+  .contact-grid{grid-template-columns:1fr}
+  .sticky-ribbon{bottom:62px; border-radius:16px}
+  .brand img{width:112px}
+  .sticky-footer{padding:0.8rem 0}
+}
+  </style>
+</head>
+<body class="Zlottour">
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="assets/img.png" alt="Zlottour logo">
+        <span class="brand-name">Zlottour Raffle</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" data-menu-toggle>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav-links" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#impact">About</a>
+        <a href="#how">How It Works</a>
+        <a href="#packages">Prizes</a>
+        <a href="/rules">Rules</a>
+        <a href="#winners">Winners</a>
+        <a href="#contact">Contact</a>
+        <a href="/faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Compete &amp; win big every week</p>
+          <h1 class="hero-title">Up to $154,000 cash prizes weekly</h1>
+          <div class="hero-prize-stack">
+            <span class="hero-prize">$3,780 Current Licensed Draw</span>
+            <span class="hero-prize-sub">995 tickets • $10 each • Licence #465790</span>
+          </div>
+          <p class="hero-sub">Zlottour is a licensed raffle experience with real cash prizes. Enter the current draw, track the countdown, and see winners posted after the official date.</p>
+          <div class="countdown-card">
+            <p class="countdown-title">Draw date: December 26, 2025</p>
+            <div class="countdown" id="countdown">
+              <div class="slot"><span class="value" id="countdownDays">27</span><small>Days</small></div>
+              <div class="slot"><span class="value" id="countdownHours">00</span><small>Hours</small></div>
+              <div class="slot"><span class="value" id="countdownMinutes">00</span><small>Minutes</small></div>
+              <div class="slot"><span class="value" id="countdownSeconds">00</span><small>Seconds</small></div>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#" class="btn primary" data-signup-btn>Join Now &amp; Start Winning</a>
+            <a href="#how" class="btn ghost">How it works</a>
+          </div>
+          <div class="badges">
+            <span class="pill accent"><i class="fa-solid fa-certificate"></i> Licence #465790</span>
+            <span class="pill"><i class="fa-solid fa-ticket"></i> 995 tickets total</span>
+            <span class="pill"><i class="fa-solid fa-calendar-day"></i> Draw: Dec 26, 2025</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="halo"></div>
+          <img src="assets/herobackground02.png" alt="Zlottour Raffle hero">
+          <span class="hero-label"><i class="fa-solid fa-circle-info"></i> Real cash prizes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">Grand prize</p>
+          <h2 class="section-title">Limited tickets. One epic $3,780 prize.</h2>
+          <p class="section-sub">A vivid, licensed raffle experience —built to stand out and easy to enter.</p>
+        </div>
+
+        <div class="grand-prize-wrap">
+          <article class="grand-card">
+            <h3>Prize overview</h3>
+            <p class="value">$3,780 value</p>
+            <p class="sub">Only 995 tickets • $10 each • Licence #465790</p>
+            <p class="pitch">Think flagship gear, premium apparel, and field-ready accessories curated for a single lucky winner.</p>
+            <div class="cta-stack">
+              <a href="#" class="btn fun" data-signup-btn><i class="fa-solid fa-bolt"></i> Get Tickets Now</a>
+              <span class="pill accent"><i class="fa-solid fa-clock"></i> Draw: Dec 26, 2025</span>
+            </div>
+          </article>
+
+          <div class="stat-grid">
+            <div class="stat-box">
+              <p class="label">Ticket pool</p>
+              <p class="num">995</p>
+              <p class="hint">Maximum odds: 1 in 995</p>
+            </div>
+            <div class="stat-box">
+              <p class="label">Price per ticket</p>
+              <p class="num">$10</p>
+              <p class="hint">First-come, first-served</p>
+            </div>
+            <div class="stat-box">
+              <p class="label">Winner count</p>
+              <p class="num">1</p>
+              <p class="hint">One grand prize package</p>
+            </div>
+            <div class="stat-box">
+              <p class="label">Draw date</p>
+              <p class="num">Dec 26</p>
+              <p class="hint">2025 • Licensed &amp; posted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">How it works</p>
+          <h2 class="section-title">Simple raffle flow</h2>
+          <p class="section-sub">Purchase, wait for the draw, and support conservation.</p>
+        </div>
+
+        <div class="package-grid">
+          <article class="package-card">
+            <div class="package-name">1. Purchase tickets</div>
+            <p class="package-note">Only 995 tickets available, $10 each.</p>
+          </article>
+          <article class="package-card">
+            <div class="package-name">2. Wait for draw</div>
+            <p class="package-note">Official draw on December 26, 2025.</p>
+          </article>
+          <article class="package-card">
+            <div class="package-name">3. Win the prize</div>
+            <p class="package-note">One winner receives the $3,780 package.</p>
+          </article>
+          <article class="package-card">
+            <div class="package-name">4. Support conservation</div>
+            <p class="package-note">Proceeds align with wildlife and outdoor heritage causes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="impact">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">Your impact</p>
+          <h2 class="section-title">Tickets that support conservation</h2>
+          <p class="section-sub">Every purchase echoes theraffle spirit—backing wildlife and outdoor heritage.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package-card">
+            <p class="package-note">
+              Every ticket helps fund wildlife and habitat initiatives similar to the Pheasant Release Program. Together we keep ecosystems healthy and outdoor experiences thriving.
+            </p>
+            <a href="/faq" class="btn primary">Ask about the mission</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="winners">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">Winners</p>
+          <h2 class="section-title">Winners announced after the draw</h2>
+          <p class="section-sub">Check back after December 26, 2025 for the official winner announcement.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package-card">
+            <p class="package-note">We’ll post the verified winner and prize claim details here once the draw is completed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="regulatory" id="responsible">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">Compliance</p>
+          <h2 class="section-title">Licensed & regulated</h2>
+          <p class="section-sub">Licensed raffle with clear limits, posted draw date, and a focus on player wellbeing.</p>
+        </div>
+
+        <div class="rg-grid">
+          <div class="rg-card">
+            <div class="rg-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Licence & limits</h3>
+            <p>Licence #465790 • 995 tickets • $10 each • Draw: Dec 26, 2025 • One $3,780 winner.</p>
+            <span class="rg-badge-pill"><i class="fa-solid fa-scale-balanced"></i> Posted odds: max 1 in 995</span>
+          </div>
+          <div class="rg-card">
+            <div class="rg-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Play safe, every time</h3>
+            <p>18+ only. Set limits, keep raffle play fun, and take breaks. We promote balance over impulse.</p>
+            <a class="rg-cta" href="https://aglc.ca/gaming/responsible-gambling" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Responsible gaming tips</a>
+          </div>
+          <div class="rg-card">
+            <div class="rg-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+            <h3>Need support?</h3>
+            <p>Helpline: <a href="tel:18663322322" class="link-accent">1-866-332-2322</a> • Alberta Health Services Addiction Helpline.</p>
+            <ul class="res-links">
+              <li><a href="https://gamesenseab.ca/" target="_blank" rel="noopener noreferrer">GameSense Alberta</a></li>
+              <li><a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer">BeGambleAware</a></li>
+              <li><a href="https://selfexclusion.ca/" target="_blank" rel="noopener noreferrer">Self-Exclusion Program</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">We’re here to help</h2>
+          <p class="section-sub">Questions about tickets, rules, or responsible gaming? Reach out anytime.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Message us</h3>
+            <p>Email: <a href="mailto:support@zlottour.com">support@zlottour.com</a></p>
+            <p>Hours: Mon–Fri, 9:00 AM – 5:00 PM (MT)</p>
+            <p>Response time: within 1–2 business days</p>
+          </div>
+          <div class="contact-form-card">
+            <h3>Need assistance?</h3>
+            <p>Visit the <a href="/faq">FAQ</a> or <a href="/rules">Rules</a> for quick answers.</p>
+            <div class="form-status" aria-live="polite">Prefer a call? Email us to schedule.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="assets/img.png" alt="Zlottour logo">
+            <span class="brand-name">Zlottour Raffle</span>
+          </div>
+          <p>Weekly raffle contests. Clear prize calls, countdowns, and responsible play.</p>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/rules">Rules</a></li>
+            <li><a href="#responsible">Responsible Gaming</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help Center</h4>
+          <ul>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rg">
+        <div class="rg-badge">Responsible Gaming</div>
+        <div class="rg-text">
+          <strong>Gambling Help and Referral</strong><br>
+          <span class="rg-warning">GAMBLING IS STRICTLY PROHIBITED FOR INDIVIDUALS UNDER 18 YEARS OF AGE</span><br>
+          This is a licensed gaming activity. Play responsibly and within your means.<br>
+          <strong>Need help?</strong> If you or someone you know has a gambling problem, help is available.<br>
+          Alberta Health Services Addiction Helpline: <a href="tel:18663322322" class="link-accent">1-866-332-2322</a> | <a href="https://aglc.ca/gaming/responsible-gambling" class="link-accent" target="_blank" rel="noopener noreferrer">Learn More</a>
+        </div>
+      </div>
+      <p class="footer-copy">© <span data-year></span> Zlottour Raffle | Licence #465790 | 18+ responsible play</p>
+    </div>
+  </footer>
+
+  <div class="sticky-ribbon">
+    <div class="item"><i class="fa-solid fa-circle-exclamation"></i> 18+</div>
+    <div class="item"><i class="fa-solid fa-shield"></i> Responsible Gaming</div>
+    <div class="item"><i class="fa-solid fa-ticket"></i> Licence #465790</div>
+    <div class="item"><i class="fa-solid fa-bolt"></i> Fast Checkout</div>
+  </div>
+
+  <button id="hubScrollTop" class="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <div class="zlottour-modal" id="signupModal">
+    <div class="modal-card">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close form"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Ticket Purchase Inquiry</h3>
+      <p>Send us a message about buying raffle tickets. We’ll respond with next steps.</p>
+      <form id="signupForm" class="modal-form">
+        <input type="text" id="signupName" placeholder="Full name" required>
+        <input type="email" id="signupEmail" placeholder="Email address" required>
+        <input type="tel" id="signupPhone" placeholder="Phone number" required>
+        <textarea id="signupMessage" placeholder="Your message or ticket request" rows="3" required></textarea>
+        <button type="submit" class="btn primary">Send message</button>
+        <p id="signupStatus" class="modal-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="sticky-footer">
+    <div class="container">
+      <div class="badge"><span class="age-number">18+</span></div>
+      <div class="badge"><i class="fa-solid fa-shield-check"></i> Responsible Gaming</div>
+      <div class="badge"><i class="fa-solid fa-certificate"></i> Licence #465790</div>
+    </div>
+  </div>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
