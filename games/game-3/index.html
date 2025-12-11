@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <title>Game Shell 3 — Drift Calm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#04130d;
+      --card:rgba(14,33,24,0.78);
+      --accent:#f28c38;
+      --accent-2:#7cf0a0;
+      --text:#e9f6ed;
+      --muted:#b1c8b7;
+      --border:rgba(124,240,160,0.24);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Space Grotesk", system-ui, sans-serif;
+      background:radial-gradient(circle at 18% 12%, rgba(124,240,160,0.14), transparent 26%),
+                 radial-gradient(circle at 82% 20%, rgba(242,140,56,0.16), transparent 32%),
+                 #04130d;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1rem;
+    }
+    .shell{
+      width:min(460px, 100%);
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:1.2rem;
+      box-shadow:0 18px 50px rgba(0,0,0,0.55);
+      text-align:center;
+    }
+    h1{margin:0 0 0.2rem; font-size:1.5rem}
+    p{margin:0.3rem 0; color:var(--muted)}
+    .meter{
+      margin:1rem 0 0.4rem;
+      height:12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      overflow:hidden;
+      border:1px solid var(--border);
+    }
+    .fill{
+      height:100%;
+      width:32%;
+      background:linear-gradient(90deg, var(--accent-2), var(--accent));
+      transition:width .25s ease;
+    }
+    .chips{
+      display:flex;
+      justify-content:center;
+      gap:0.6rem;
+      margin:0.8rem 0 1rem;
+    }
+    .chip{
+      padding:0.4rem 0.8rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.04);
+      color:var(--text);
+      cursor:pointer;
+      transition:transform .16s ease, border-color .16s ease;
+    }
+    .chip:hover{transform:translateY(-2px); border-color:var(--accent-2)}
+    .log{
+      min-height:24px;
+      color:var(--muted);
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <h1>Zen Streak Shell</h1>
+    <p>Low-motion frame for mindful taps. Replace with your build when ready.</p>
+    <div class="meter"><div class="fill" id="fill"></div></div>
+    <div class="chips">
+      <button class="chip" data-boost="15">+ Calm</button>
+      <button class="chip" data-boost="22">+ Focus</button>
+      <button class="chip" data-boost="-18">Reset</button>
+    </div>
+    <div class="log" id="log">Set your pace.</div>
+  </div>
+
+  <script>
+    const fill = document.getElementById("fill");
+    const log = document.getElementById("log");
+    document.querySelectorAll(".chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const change = Number(chip.dataset.boost);
+        const current = parseInt(fill.style.width, 10) || 32;
+        const next = Math.min(100, Math.max(8, current + change));
+        fill.style.width = next + "%";
+        log.textContent = change < 0 ? "Reset to a calm state." : "Boost applied. Keep it light.";
+      });
+    });
+  </script>
+</body>
+</html>
