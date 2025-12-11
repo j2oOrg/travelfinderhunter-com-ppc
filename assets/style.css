@@ -63,7 +63,7 @@ img{max-width:100%; display:block}
   letter-spacing:0.5px;
 }
 
-.zlottour-com-nav{
+.travelfinderhunter-com-nav{
   background:rgba(6,10,20,0.92);
   border-bottom:1px solid var(--border);
   backdrop-filter:blur(14px);
@@ -72,7 +72,7 @@ img{max-width:100%; display:block}
   z-index:60;
   padding:0.85rem 0;
 }
-.zlottour-com-nav .navbar-brand{
+.travelfinderhunter-com-nav .navbar-brand{
   display:flex;
   align-items:center;
   gap:0.65rem;
@@ -85,7 +85,7 @@ img{max-width:100%; display:block}
   border-radius:12px;
   box-shadow:0 12px 30px rgba(0,0,0,0.45);
 }
-.zlottour-com-nav .nav-link{
+.travelfinderhunter-com-nav .nav-link{
   color:var(--text);
   font-weight:600;
   margin:0 0.35rem;
@@ -93,8 +93,8 @@ img{max-width:100%; display:block}
   border-radius:10px;
   transition:background .15s, color .15s;
 }
-.zlottour-com-nav .nav-link.active,
-.zlottour-com-nav .nav-link:hover{
+.travelfinderhunter-com-nav .nav-link.active,
+.travelfinderhunter-com-nav .nav-link:hover{
   background:var(--panel);
   color:var(--accent);
 }
@@ -104,7 +104,7 @@ img{max-width:100%; display:block}
 }
 .navbar-toggler:focus{box-shadow:0 0 0 3px rgba(112,240,199,0.18)}
 
-.zlottour-com-btn{
+.travelfinderhunter-com-btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -117,18 +117,18 @@ img{max-width:100%; display:block}
   transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
   text-decoration:none;
 }
-.zlottour-com-btn.primary{
+.travelfinderhunter-com-btn.primary{
   background:linear-gradient(135deg, var(--accent), var(--accent-2));
   color:#060a14;
   box-shadow:0 14px 36px rgba(0,0,0,0.4);
 }
-.zlottour-com-btn.primary:hover{transform:translateY(-2px)}
-.zlottour-com-btn.outline{
+.travelfinderhunter-com-btn.primary:hover{transform:translateY(-2px)}
+.travelfinderhunter-com-btn.outline{
   background:var(--panel);
   border-color:var(--border);
   color:var(--text);
 }
-.zlottour-com-btn.outline:hover{color:var(--accent)}
+.travelfinderhunter-com-btn.outline:hover{color:var(--accent)}
 
 .eyebrow{
   text-transform:uppercase;
@@ -145,13 +145,13 @@ img{max-width:100%; display:block}
 }
 .section-sub{margin:0 0 1rem; color:var(--muted)}
 
-.zlottour-com-hero{
+.travelfinderhunter-com-hero{
   position:relative;
   padding:clamp(3rem, 6vw, 4.8rem) 0;
   overflow:hidden;
 }
-.zlottour-com-hero::before,
-.zlottour-com-hero::after{
+.travelfinderhunter-com-hero::before,
+.travelfinderhunter-com-hero::after{
   content:"";
   position:absolute;
   width:420px; height:420px;
@@ -160,8 +160,8 @@ img{max-width:100%; display:block}
   opacity:0.35;
   z-index:0;
 }
-.zlottour-com-hero::before{top:-120px; left:-60px; background:radial-gradient(circle, rgba(112,240,199,0.45), transparent 60%)}
-.zlottour-com-hero::after{bottom:-140px; right:-20px; background:radial-gradient(circle, rgba(245,196,82,0.45), transparent 60%)}
+.travelfinderhunter-com-hero::before{top:-120px; left:-60px; background:radial-gradient(circle, rgba(112,240,199,0.45), transparent 60%)}
+.travelfinderhunter-com-hero::after{bottom:-140px; right:-20px; background:radial-gradient(circle, rgba(245,196,82,0.45), transparent 60%)}
 .hero-inner{
   position:relative;
   z-index:1;
@@ -206,7 +206,7 @@ img{max-width:100%; display:block}
   border-color:rgba(245,196,82,0.4);
 }
 
-.zlottour-com-disclaimer-card{padding:3rem 0}
+.travelfinderhunter-com-disclaimer-card{padding:3rem 0}
 .disclaimer-box{
   max-width:900px;
   margin:0 auto;
@@ -238,7 +238,7 @@ img{max-width:100%; display:block}
 }
 .disclaimer-btn:hover{background:var(--accent-2); color:#02150f}
 
-.zlottour-com-play{
+.travelfinderhunter-com-play{
   padding:3.5rem 0;
   text-align:center;
 }
@@ -276,7 +276,7 @@ img{max-width:100%; display:block}
   font-weight:600;
 }
 
-.zlottour-com-features{
+.travelfinderhunter-com-features{
   padding:3.5rem 0;
   background:rgba(255,255,255,0.01);
 }
@@ -300,7 +300,7 @@ img{max-width:100%; display:block}
 .feature-box h4{margin:0 0 0.35rem; font-family:var(--font-heading)}
 .feature-box p{margin:0; color:var(--muted)}
 
-.zlottour-com-about{padding:3.8rem 0}
+.travelfinderhunter-com-about{padding:3.8rem 0}
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -328,9 +328,9 @@ img{max-width:100%; display:block}
 }
 .about-visual img{border-radius:12px; box-shadow:0 16px 36px rgba(0,0,0,0.55)}
 .about-text p{color:var(--muted); margin:0 0 0.8rem}
-.about-text .zlottour-com-btn{margin-top:0.4rem}
+.about-text .travelfinderhunter-com-btn{margin-top:0.4rem}
 
-.zlottour-com-reviews{
+.travelfinderhunter-com-reviews{
   padding:3.5rem 0;
   text-align:center;
 }
@@ -351,7 +351,7 @@ img{max-width:100%; display:block}
 .review-text{font-style:italic; color:var(--text); margin:0 0 0.6rem}
 .review-author{color:var(--accent); font-weight:700; margin:0}
 
-.zlottour-com-contact{
+.travelfinderhunter-com-contact{
   background:rgba(255,255,255,0.01);
   padding:4rem 0;
 }
@@ -403,24 +403,24 @@ img{max-width:100%; display:block}
 .form-status.success{color:#8ef8c8}
 .form-status.error{color:#f5c452}
 
-.zlottour-com-legal{
+.travelfinderhunter-com-legal{
   background:rgba(255,255,255,0.02);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
   padding:3.5rem 0;
 }
-.zlottour-com-legal .section-title{text-align:center}
-.zlottour-com-legal .subheading{
+.travelfinderhunter-com-legal .section-title{text-align:center}
+.travelfinderhunter-com-legal .subheading{
   color:var(--accent);
   font-size:1.15rem;
   margin:1.6rem 0 0.4rem;
 }
-.zlottour-com-legal p{
+.travelfinderhunter-com-legal p{
   color:var(--muted);
   margin:0 0 1rem;
 }
 
-.zlottour-com-footer{
+.travelfinderhunter-com-footer{
   background:rgba(6,10,20,0.95);
   color:var(--text);
   text-align:center;
@@ -429,14 +429,14 @@ img{max-width:100%; display:block}
   position:relative;
   overflow:hidden;
 }
-.zlottour-com-footer::before{
+.travelfinderhunter-com-footer::before{
   content:"";
   position:absolute;
   inset:0;
   background:radial-gradient(circle at 50% 20%, rgba(245,196,82,0.04), transparent 65%);
   z-index:0;
 }
-.zlottour-com-footer .container{position:relative; z-index:1}
+.travelfinderhunter-com-footer .container{position:relative; z-index:1}
 .footer-brand{
   display:flex;
   align-items:center;
@@ -473,7 +473,7 @@ img{max-width:100%; display:block}
   margin:0;
 }
 
-.zlottour-com-popup{
+.travelfinderhunter-com-popup{
   position:fixed;
   inset:0;
   display:flex;
@@ -486,8 +486,8 @@ img{max-width:100%; display:block}
   transition:opacity .2s, visibility .2s;
   padding:1rem;
 }
-.zlottour-com-popup.active{opacity:1; visibility:visible}
-.zlottour-com-popup .popup-inner{
+.travelfinderhunter-com-popup.active{opacity:1; visibility:visible}
+.travelfinderhunter-com-popup .popup-inner{
   background:linear-gradient(160deg, rgba(6,10,20,0.96), rgba(6,10,20,0.98));
   border:1px solid var(--border);
   color:var(--text);
@@ -497,13 +497,13 @@ img{max-width:100%; display:block}
   text-align:center;
   box-shadow:var(--shadow);
 }
-.zlottour-com-popup h3{margin:0 0 0.4rem; color:var(--heading)}
-.zlottour-com-popup p{margin:0 0 0.8rem; color:var(--muted)}
+.travelfinderhunter-com-popup h3{margin:0 0 0.4rem; color:var(--heading)}
+.travelfinderhunter-com-popup p{margin:0 0 0.8rem; color:var(--muted)}
 .popup-buttons{display:flex; justify-content:center; gap:0.6rem; flex-wrap:wrap}
 .popup-buttons .exit{background:transparent; border:1px solid var(--border); color:var(--heading)}
 .popup-buttons .exit:hover{background:var(--panel)}
 
-.zlottour-com-scroll{
+.travelfinderhunter-com-scroll{
   position:fixed;
   right:22px;
   bottom:22px;
@@ -523,8 +523,8 @@ img{max-width:100%; display:block}
   transition:all .16s;
   z-index:90;
 }
-.zlottour-com-scroll.show{opacity:1; visibility:visible}
-.zlottour-com-scroll:hover{background:var(--accent-2)}
+.travelfinderhunter-com-scroll.show{opacity:1; visibility:visible}
+.travelfinderhunter-com-scroll:hover{background:var(--accent-2)}
 
 .sr-only{
   position:absolute;
@@ -547,7 +547,7 @@ img{max-width:100%; display:block}
 @media (max-width: 768px){
   .hero-title{font-size:2.05rem}
   .game-frame{max-width:100%}
-  .zlottour-com-nav{padding:0.75rem 0}
+  .travelfinderhunter-com-nav{padding:0.75rem 0}
 }
 @media (max-width: 576px){
   .hero-cta{flex-direction:column}
