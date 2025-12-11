@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <title>Privacy Policy — Zlottour Raffle</title>
+  <meta name="description" content="Privacy Policy for Zlottour Raffle: how we collect, use, and protect data for licensed raffles ($3,780 prize, 995 tickets at $10, draw Dec 26, 2025).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+:root{
+  --bg: #0d0b21;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #e8e9ff;
+  --muted: #c6c8e6;
+  --heading: #ffffff;
+  --accent: #f6d65b;
+  --secondary: #9a7bff;
+  --primary: #130f2e;
+  --border: rgba(255,255,255,0.14);
+  --radius: 16px;
+  --shadow: 0 24px 70px rgba(0,0,0,0.55);
+  --font-display: "Bebas Neue", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(154,123,255,0.16), transparent 32%),
+    radial-gradient(circle at 82% 18%, rgba(246,214,91,0.12), transparent 30%),
+    radial-gradient(circle at 50% 90%, rgba(108,205,255,0.14), transparent 30%),
+    linear-gradient(145deg, #0a0819 0%, #0d0a24 40%, #0f0c2c 100%);
+  color:var(--text);
+  line-height:1.65;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none; transition:color .18s ease, opacity .18s ease}
+a:hover{color:var(--secondary); opacity:0.92}
+img{max-width:100%; display:block}
+
+.container{width:min(1180px, 100% - 2.4rem); margin:0 auto}
+
+.topbar{position:sticky; top:0; z-index:80; background:rgba(10,8,25,0.9); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); box-shadow:0 8px 30px rgba(0,0,0,0.35)}
+.nav-wrap{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.9rem 0}
+.brand{display:flex; align-items:center; gap:0.75rem}
+.brand img{width:132px; border-radius:12px; box-shadow:0 10px 28px rgba(0,0,0,0.45)}
+.brand-name{font-family:var(--font-display); letter-spacing:2px; font-size:1.6rem; color:var(--heading)}
+.nav-links{display:flex; align-items:center; gap:0.8rem}
+.nav-links a{color:var(--text); font-weight:600; padding:0.45rem 0.75rem; border-radius:12px; transition:background .15s ease, color .15s ease}
+.nav-links a:hover{background:var(--panel); color:var(--accent)}
+.nav-links .btn{padding:0.72rem 1rem}
+.menu-toggle{display:none; background:var(--panel); border:1px solid var(--border); color:var(--text); padding:0.55rem 0.75rem; border-radius:12px}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:0.45rem; padding:0.78rem 1.6rem; border-radius:12px; font-weight:700; border:1px solid transparent; cursor:pointer; transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease; white-space:nowrap}
+.btn.primary{background:linear-gradient(135deg, var(--secondary), var(--accent)); color:#0b0920; box-shadow:0 12px 36px rgba(0,0,0,0.35)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{background:var(--panel); border-color:var(--border); color:var(--text)}
+.btn.ghost:hover{color:var(--accent)}
+
+.hero{position:relative; overflow:hidden; padding:clamp(2.5rem, 6vw, 4.2rem) 0}
+.hero::before,.hero::after{content:""; position:absolute; width:420px; height:420px; border-radius:50%; filter:blur(120px); opacity:0.35; z-index:0}
+.hero::before{top:-120px; left:-60px; background:radial-gradient(circle, rgba(154,123,255,0.45), transparent 60%)}
+.hero::after{bottom:-140px; right:-20px; background:radial-gradient(circle, rgba(246,214,91,0.4), transparent 60%)}
+.hero-inner{position:relative; z-index:1; display:grid; grid-template-columns:1fr; gap:1rem; text-align:left}
+.hero-title{font-family:var(--font-display); font-size:clamp(2.1rem, 5vw, 3.4rem); letter-spacing:1px; margin:0 0 0.4rem; color:var(--heading)}
+.hero-sub{color:var(--muted); margin:0 0 0.6rem; max-width:840px}
+.meta{color:var(--muted); font-weight:600; margin:0}
+
+.card{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.4rem; box-shadow:var(--shadow); margin-bottom:1rem}
+.card h3{margin:0 0 0.35rem; color:var(--heading)}
+.card h4{margin:1.1rem 0 0.4rem; color:var(--heading)}
+.card p{margin:0 0 0.7rem; color:var(--muted)}
+.card ul{margin:0 0 0.6rem; padding-left:1.2rem; color:var(--muted)}
+.card li{margin:0.25rem 0}
+
+.section-head{text-align:center; margin:2.6rem 0 1.6rem}
+.section-eyebrow{text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin:0; font-size:0.9rem}
+.section-title{font-family:var(--font-display); font-size:clamp(1.9rem, 4vw, 2.6rem); color:var(--heading); margin:0.25rem 0}
+.section-sub{margin:0; color:var(--muted)}
+
+.reg-card{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:1.2rem; box-shadow:var(--shadow); margin-bottom:1rem}
+.res-links{display:flex; flex-wrap:wrap; gap:0.6rem; padding:0; margin:0; list-style:none}
+.res-links a{color:var(--accent); font-weight:600}
+.res-links a:hover{color:var(--secondary)}
+
+.footer{background:linear-gradient(180deg, #0a0718, #080615); border-top:1px solid var(--border); padding:3rem 0 2.2rem; margin-top:3rem}
+.footer-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.2rem; margin-bottom:1.6rem}
+.footer h4{margin:0 0 0.5rem; color:var(--heading)}
+.footer p{margin:0; color:var(--muted)}
+.footer ul{list-style:none; padding:0; margin:0}
+.footer li{margin:0.35rem 0}
+.footer-copy{text-align:center; color:var(--muted); margin:0}
+
+.sticky-ribbon{position:fixed; bottom:12px; left:50%; transform:translateX(-50%); background:rgba(12,10,30,0.9); border:1px solid var(--border); border-radius:999px; padding:0.55rem 1rem; display:flex; align-items:center; gap:0.8rem; box-shadow:0 12px 30px rgba(0,0,0,0.45); backdrop-filter:blur(10px); z-index:60; flex-wrap:wrap}
+.sticky-ribbon .item{display:flex; align-items:center; gap:0.35rem; color:var(--muted); font-weight:600}
+.sticky-ribbon .item i{color:var(--accent)}
+
+.scroll-top{position:fixed; right:18px; bottom:70px; width:46px; height:46px; border-radius:50%; border:none; background:var(--accent); color:#0b0920; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 14px 34px rgba(0,0,0,0.55); opacity:0; visibility:hidden; transition:all .16s; z-index:65}
+.scroll-top.show{opacity:1; visibility:visible}
+.scroll-top:hover{background:var(--secondary); color:#fff}
+
+@media (max-width: 960px){
+  .nav-links{position:absolute; left:0; right:0; top:100%; background:rgba(10,8,25,0.96); padding:0.8rem 1.2rem 1rem; flex-direction:column; align-items:flex-start; border-bottom:1px solid var(--border); display:none}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:inline-flex}
+}
+@media (max-width: 720px){
+  .brand img{width:112px}
+  .sticky-ribbon{bottom:14px; border-radius:16px}
+}
+  </style>
+</head>
+<body class="Zlottour">
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="/">
+        <img src="../assets/img.png" alt="Zlottour logo">
+        <span class="brand-name">Zlottour Raffle</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" data-menu-toggle>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav-links" id="navMenu">
+        <a href="/">Home</a>
+        <a href="/#impact">About</a>
+        <a href="/#how">How It Works</a>
+        <a href="/prizes">Prizes</a>
+        <a href="/rules">Rules</a>
+        <a href="/#winners">Winners</a>
+        <a href="/#contact">Contact</a>
+        <a href="/faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="privacy">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="hero-title">Privacy Policy</h1>
+          <p class="hero-sub">How Zlottour Raffle collects, uses, and protects your data across contests and account flows.</p>
+          <p class="meta">Last Updated: January 10, 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="privacy-content">
+      <div class="card" id="privacy-content">
+        <h3>Introduction</h3>
+        <p>"Zlottour Raffle," "we," "our," or "us" follows clear privacy standards. This policy explains how we handle information when you visit our site and use our services.</p>
+
+        <h4>Information We Collect</h4>
+        <p>We collect the following types of information:</p>
+        <ul>
+          <li>Personal identification information (name, email address, phone number, etc.).</li>
+          <li>Financial information (payment details, transaction history).</li>
+          <li>Technical data (IP address, browser type, device information).</li>
+          <li>Usage data (how you interact with our services).</li>
+          <li>Gaming/contest activity and preferences.</li>
+        </ul>
+
+        <h4>How We Use Your Information</h4>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Provide and maintain our services.</li>
+          <li>Process transactions and manage your account.</li>
+          <li>Communicate with you about your account and our services.</li>
+          <li>Comply with legal and regulatory requirements.</li>
+          <li>Prevent fraud and enhance security.</li>
+          <li>Improve our services and develop new features.</li>
+        </ul>
+
+        <h4>Data Security</h4>
+        <p>We implement technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. No method of transmission over the Internet is 100% secure, but we align controls with regulatory expectations.</p>
+
+        <h4>Your Rights</h4>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access your personal information.</li>
+          <li>Correct inaccurate or incomplete information.</li>
+          <li>Request deletion of your information.</li>
+          <li>Object to processing of your information.</li>
+          <li>Request restriction of processing.</li>
+          <li>Data portability.</li>
+        </ul>
+
+        <h4>Company Information</h4>
+        <p><strong>Operating Entity:</strong> Elion Olc Colimo Foundation</p>
+        <p><strong>Registered Address:</strong> 129, Triq Fleur-De-Lys, Birkirkara, BKR 9066, Malta</p>
+
+        <h4>Contact Us</h4>
+        <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:support@zlottour.com">support@zlottour.com</a> or visit the <a href="/#contact">contact section</a> on our homepage.</p>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="reg-head">
+      <div class="section-head">
+        <p class="section-eyebrow">Compliance</p>
+        <h2 class="section-title" id="reg-head">Regulatory Details</h2>
+        <p class="section-sub">Operating entity, license numbers, and responsible gaming resources.</p>
+      </div>
+      <div class="reg-card">
+        <h3>License Information</h3>
+        <p>Licensee: Zlottour Raffle | Licence #465790</p>
+        <p>Tickets: 995 total • $10 each • Draw date: December 26, 2025 • Prize: $3,780 retail value package.</p>
+        <p>One winner selected per the posted raffle rules. Odds depend on tickets sold (maximum 1 in 995).</p>
+      </div>
+      <div class="reg-card">
+        <h3>Play Safe, Play Smart</h3>
+        <p>We encourage all players to review responsible gaming guidelines to ensure a secure and enjoyable experience.</p>
+        <ul class="res-links">
+          <li><a href="https://aglc.ca/gaming/responsible-gambling" target="_blank" rel="noopener noreferrer">AGLC Responsible Gambling</a></li>
+          <li><a href="https://gamesenseab.ca/" target="_blank" rel="noopener noreferrer">GameSense Alberta</a></li>
+          <li><a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer">BeGambleAware</a></li>
+          <li><a href="https://selfexclusion.ca/" target="_blank" rel="noopener noreferrer">Self-Exclusion Program</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="../assets/img.png" alt="Zlottour logo">
+            <span class="brand-name">Zlottour Raffle</span>
+          </div>
+          <p>Weekly raffle contests. Clear prize calls, countdowns, and responsible play.</p>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/rules">Rules</a></li>
+            <li><a href="/#responsible">Responsible Gaming</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help Center</h4>
+          <ul>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">© <span data-year></span> Zlottour Raffle | Licence #465790 | 18+ responsible play</p>
+    </div>
+  </footer>
+
+  <div class="sticky-ribbon">
+    <div class="item"><i class="fa-solid fa-circle-exclamation"></i> 18+</div>
+    <div class="item"><i class="fa-solid fa-shield"></i> Responsible Gaming</div>
+    <div class="item"><i class="fa-solid fa-ticket"></i> Verified Entries</div>
+    <div class="item"><i class="fa-solid fa-bolt"></i> Fast Checkout</div>
+  </div>
+
+  <button id="hubScrollTop" class="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="../assets/main.js" defer></script>
+</body>
+</html>
+
+
+
