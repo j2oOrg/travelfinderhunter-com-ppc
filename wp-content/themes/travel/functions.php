@@ -46,8 +46,19 @@ add_filter('body_class', function ($classes) {
 });
 
 function travel_fallback_menu() {
+    $exclude_ids = [];
+    foreach (['faq', 'rules', 'sample-page'] as $slug) {
+        $page = get_page_by_path($slug);
+        if ($page) {
+            $exclude_ids[] = $page->ID;
+        }
+    }
+
     echo '<ul class="menu">';
-    wp_list_pages(['title_li' => '']);
+    wp_list_pages([
+        'title_li' => '',
+        'exclude' => $exclude_ids ? implode(',', $exclude_ids) : '',
+    ]);
     echo '</ul>';
 }
 
