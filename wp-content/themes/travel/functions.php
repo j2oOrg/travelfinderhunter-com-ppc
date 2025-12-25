@@ -238,6 +238,120 @@ function travel_get_hotel_debug() {
         : [];
 }
 
+function travel_get_cache_dir() {
+    $upload_dir = wp_upload_dir(null, false);
+    if (!is_array($upload_dir) || empty($upload_dir['basedir'])) {
+        return '';
+    }
+
+    return trailingslashit($upload_dir['basedir']) . 'travel-cache';
+}
+
+function travel_get_cache_file() {
+    $dir = travel_get_cache_dir();
+    if (!$dir) {
+        return '';
+    }
+
+    return trailingslashit($dir) . 'hotel-results.json';
+}
+
+function travel_read_cache() {
+    $file = travel_get_cache_file();
+    if (!$file || !file_exists($file)) {
+        return [];
+    }
+
+    $contents = file_get_contents($file);
+    if ($contents === false || $contents === '') {
+        return [];
+    }
+
+    $data = json_decode($contents, true);
+    return is_array($data) ? $data : [];
+}
+
+function travel_write_cache(array $data) {
+    $dir = travel_get_cache_dir();
+    $file = $dir ? trailingslashit($dir) . 'hotel-results.json' : '';
+    if (!$dir || !$file) {
+        return;
+    }
+
+    if (!is_dir($dir)) {
+        wp_mkdir_p($dir);
+    }
+
+    $json = wp_json_encode($data);
+    if ($json === false) {
+        return;
+    }
+
+    file_put_contents($file, $json);
+}
+
+function travel_hotel_cache_key(array $item) {
+    $key_parts = [
+        isset($item['link']) ? $item['link'] : '',
+        isset($item['name']) ? $item['name'] : '',
+        isset($item['location']) ? $item['location'] : '',
+    ];
+
+    return md5(implode('|', $key_parts));
+}
+
+function travel_cache_hotel_results(array $items) {
+    $items = array_values(array_filter($items, function ($item) {
+        return is_array($item) && !empty($item['name']);
+    }));
+
+    if (!$items) {
+        return;
+    }
+
+    $cache = travel_read_cache();
+    $stored = isset($cache['items']) && is_array($cache['items']) ? $cache['items'] : [];
+
+    $indexed = [];
+    foreach ($stored as $item) {
+        if (!is_array($item)) {
+            continue;
+        }
+        $indexed[travel_hotel_cache_key($item)] = $item;
+    }
+
+    foreach ($items as $item) {
+        $indexed[travel_hotel_cache_key($item)] = $item;
+    }
+
+    $merged = array_values($indexed);
+    if (count($merged) > 200) {
+        $merged = array_slice($merged, 0, 200);
+    }
+
+    travel_write_cache([
+        'updated' => gmdate('c'),
+        'items' => $merged,
+    ]);
+}
+
+function travel_get_cached_hotel_results($limit = 20) {
+    $cache = travel_read_cache();
+    $items = isset($cache['items']) && is_array($cache['items']) ? $cache['items'] : [];
+    if (!$items) {
+        return [];
+    }
+
+    shuffle($items);
+
+    $limit = (int) $limit;
+    if ($limit < 1) {
+        return [];
+    }
+
+    return array_slice($items, 0, $limit);
+}
+
 function travel_parse_date($value) {
     if (!$value || !is_string($value)) {
         return '';
@@ -614,6 +728,7 @@ function travel_get_hotel_results($query) {
         'adults_number' => $adults,
         'region_terms' => $region_terms,
     ];
+    $debug['cache_file'] = travel_get_cache_file();
 
     if ($region_override) {
         $region = [
@@ -742,6 +857,7 @@ function travel_get_hotel_results($query) {
         $debug['cached'] = true;
         if (isset($cached['items']) && is_array($cached['items'])) {
             $debug['result_count'] = count($cached['items']);
+            travel_cache_hotel_results($cached['items']);
         }
         travel_set_hotel_debug($debug);
         return $cached;
@@ -766,6 +882,9 @@ function travel_get_hotel_results($query) {
         }
         $items[] = $normalized;
     }
+
+    $cache_items = array_slice($items, 0, 60);
+    travel_cache_hotel_results($cache_items);
 
     $debug['result_count'] = count($items);
     travel_set_hotel_debug($debug);

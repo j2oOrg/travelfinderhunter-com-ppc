@@ -743,7 +743,8 @@ img {
     gap: 10px;
 }
 
-.hotel-body h2 {
+.hotel-body h2,
+.hotel-body h3 {
     margin: 0;
 }
 

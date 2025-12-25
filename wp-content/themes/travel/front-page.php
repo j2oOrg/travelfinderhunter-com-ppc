@@ -87,6 +87,7 @@ $steps = [
 
 $deals_category = get_category_by_slug('hotel-deals');
 $deals_category_id = $deals_category ? $deals_category->term_id : 0;
+$cached_hotels = function_exists('travel_get_cached_hotel_results') ? travel_get_cached_hotel_results(20) : [];
 ?>
 
 <section class="hero">
@@ -137,6 +138,77 @@ $deals_category_id = $deals_category ? $deals_category->term_id : 0;
         </div>
     </div>
 </section>
+
+<?php if (!empty($cached_hotels)) : ?>
+    <section class="section stays">
+        <div class="wrap">
+            <div class="section-head reveal" style="--delay: 0.05s;">
+                <p class="eyebrow"><?php esc_html_e('Live stays', 'travel'); ?></p>
+                <h2><?php esc_html_e('Random picks from recent searches', 'travel'); ?></h2>
+                <p><?php esc_html_e('These hotel snapshots refresh as travelers search the site.', 'travel'); ?></p>
+            </div>
+            <div class="hotel-grid">
+                <?php foreach ($cached_hotels as $index => $item) : ?>
+                    <?php
+                    $delay = sprintf('%.2fs', 0.05 * ($index + 1));
+                    $link = isset($item['link']) ? $item['link'] : '';
+                    $external = !empty($item['external']);
+                    $link_attrs = $external ? ' target="_blank" rel="noopener noreferrer"' : '';
+                    $review_count = isset($item['reviews']) ? $item['reviews'] : '';
+                    if ($review_count !== '' && is_numeric($review_count)) {
+                        $review_count = number_format_i18n((int) $review_count);
+                    }
+                    ?>
+                    <article class="hotel-card reveal" style="--delay: <?php echo esc_attr($delay); ?>;">
+                        <div class="hotel-media">
+                            <?php if (!empty($item['image'])) : ?>
+                                <img src="<?php echo esc_url($item['image']); ?>" alt="<?php echo esc_attr($item['name']); ?>" loading="lazy">
+                            <?php else : ?>
+                                <div class="hotel-media-fallback" aria-hidden="true"></div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="hotel-body">
+                            <span class="tag"><?php esc_html_e('Hotel deal', 'travel'); ?></span>
+                            <h3>
+                                <?php if ($link) : ?>
+                                    <a href="<?php echo esc_url($link); ?>"<?php echo $link_attrs; ?>><?php echo esc_html($item['name']); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($item['name']); ?>
+                                <?php endif; ?>
+                            </h3>
+                            <?php if (!empty($item['location'])) : ?>
+                                <p class="hotel-location"><?php echo esc_html($item['location']); ?></p>
+                            <?php endif; ?>
+                            <div class="hotel-meta">
+                                <?php if (!empty($item['price'])) : ?>
+                                    <span class="price"><?php echo esc_html($item['price']); ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty($item['rating'])) : ?>
+                                    <span class="hotel-rating">
+                                        <?php
+                                        echo esc_html($item['rating']);
+                                        if ($review_count !== '') {
+                                            printf(
+                                                ' (%s)',
+                                                esc_html($review_count)
+                                            );
+                                        }
+                                        ?>
+                                    </span>
+                                <?php endif; ?>
+                            </div>
+                            <?php if ($link) : ?>
+                                <a class="text-link" href="<?php echo esc_url($link); ?>"<?php echo $link_attrs; ?>>
+                                    <?php esc_html_e('View deal', 'travel'); ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
 
 <section id="destinations" class="section destinations">
     <div class="wrap">
