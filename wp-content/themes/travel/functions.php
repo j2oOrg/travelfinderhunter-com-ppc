@@ -104,6 +104,19 @@ function travel_get_rapidapi_domain() {
     return $domain ? $domain : 'US';
 }
 
+function travel_get_hotels_base_url() {
+    if (defined('TRAVEL_HOTELS_BASE_URL') && TRAVEL_HOTELS_BASE_URL) {
+        return TRAVEL_HOTELS_BASE_URL;
+    }
+
+    $base = getenv('TRAVEL_HOTELS_BASE_URL');
+    if ($base) {
+        return $base;
+    }
+
+    return 'https://www.hotels.com';
+}
+
 function travel_parse_date($value) {
     if (!$value || !is_string($value)) {
         return '';
@@ -254,7 +267,7 @@ function travel_fetch_region($query, $locale, $domain, $headers) {
     $search_terms = array_merge([$query], travel_region_fallback_terms($query));
 
     foreach ($search_terms as $term) {
-        $data = travel_remote_get('/v3/regions/search', [
+        $data = travel_remote_get('/v2/regions', [
             'locale' => $locale,
             'domain' => $domain,
             'query' => $term,
@@ -291,6 +304,10 @@ function travel_extract_hotel_items($data) {
     $lists = [];
 
     if (isset($data['data']) && is_array($data['data'])) {
+        if (isset($data['data']['properties']) && is_array($data['data']['properties'])) {
+            $lists[] = $data['data']['properties'];
+        }
+
         if (isset($data['data']['propertySearch']['properties']) && is_array($data['data']['propertySearch']['properties'])) {
             $lists[] = $data['data']['propertySearch']['properties'];
         }
@@ -319,7 +336,16 @@ function travel_normalize_hotel_item(array $item) {
     $name = $item['name'] ?? $item['propertyName'] ?? $item['hotelName'] ?? '';
 
     $price = '';
-    if (isset($item['price']['lead']['formatted'])) {
+    if (isset($item['price']['priceSummary']['definition']['displayPrice'])) {
+        $price = $item['price']['priceSummary']['definition']['displayPrice'];
+    } elseif (isset($item['price']['priceSummary']['displayPrices']) && is_array($item['price']['priceSummary']['displayPrices'])) {
+        foreach ($item['price']['priceSummary']['displayPrices'] as $display_price) {
+            if (isset($display_price['price']['formatted'])) {
+                $price = $display_price['price']['formatted'];
+                break;
+            }
+        }
+    } elseif (isset($item['price']['lead']['formatted'])) {
         $price = $item['price']['lead']['formatted'];
     } elseif (isset($item['ratePlan']['price']['current'])) {
         $price = $item['ratePlan']['price']['current'];
@@ -330,21 +356,35 @@ function travel_normalize_hotel_item(array $item) {
     }
 
     $rating = '';
-    if (isset($item['reviews']['score'])) {
+    if (isset($item['guestRating']['rating'])) {
+        $rating = $item['guestRating']['rating'];
+    } elseif (isset($item['reviews']['score'])) {
         $rating = $item['reviews']['score'];
     } elseif (isset($item['guestReviews']['rating'])) {
         $rating = $item['guestReviews']['rating'];
     }
 
     $review_count = '';
-    if (isset($item['reviews']['total'])) {
+    if (isset($item['guestRating']['phrases']) && is_array($item['guestRating']['phrases'])) {
+        foreach ($item['guestRating']['phrases'] as $phrase) {
+            if (!is_string($phrase)) {
+                continue;
+            }
+            if (preg_match('/([0-9,]+)\\s+reviews?/i', $phrase, $matches)) {
+                $review_count = str_replace(',', '', $matches[1]);
+                break;
+            }
+        }
+    } elseif (isset($item['reviews']['total'])) {
         $review_count = $item['reviews']['total'];
     } elseif (isset($item['guestReviews']['total'])) {
         $review_count = $item['guestReviews']['total'];
     }
 
     $location = '';
-    if (isset($item['neighborhood']['name'])) {
+    if (isset($item['messages'][0]) && is_string($item['messages'][0])) {
+        $location = $item['messages'][0];
+    } elseif (isset($item['neighborhood']['name'])) {
         $location = $item['neighborhood']['name'];
     } elseif (isset($item['neighborhood'])) {
         $location = $item['neighborhood'];
@@ -357,7 +397,9 @@ function travel_normalize_hotel_item(array $item) {
     }
 
     $image = '';
-    if (isset($item['propertyImage']['image']['url'])) {
+    if (isset($item['mediaSection']['media'][0]['url'])) {
+        $image = $item['mediaSection']['media'][0]['url'];
+    } elseif (isset($item['propertyImage']['image']['url'])) {
         $image = $item['propertyImage']['image']['url'];
     } elseif (isset($item['optimizedThumbUrls']['srpDesktop'])) {
         $image = $item['optimizedThumbUrls']['srpDesktop'];
@@ -368,6 +410,9 @@ function travel_normalize_hotel_item(array $item) {
     $link = $item['landingPageUrl'] ?? $item['propertyUrl'] ?? $item['link'] ?? $item['url'] ?? '';
     $external = false;
     if ($link) {
+        if (strpos($link, '/') === 0) {
+            $link = rtrim(travel_get_hotels_base_url(), '/') . $link;
+        }
         $external = true;
     }
 
