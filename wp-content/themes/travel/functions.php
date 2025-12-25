@@ -117,6 +117,127 @@ function travel_get_hotels_base_url() {
     return 'https://www.hotels.com';
 }
 
+function travel_get_query_value($key) {
+    if (!isset($_GET[$key])) {
+        return '';
+    }
+
+    $value = wp_unslash($_GET[$key]);
+    if (is_array($value)) {
+        return '';
+    }
+
+    return sanitize_text_field($value);
+}
+
+function travel_get_query_array($key) {
+    if (!isset($_GET[$key])) {
+        return [];
+    }
+
+    $value = wp_unslash($_GET[$key]);
+    if (is_array($value)) {
+        return array_values(array_filter(array_map('sanitize_text_field', $value)));
+    }
+
+    $value = sanitize_text_field($value);
+    if ($value === '') {
+        return [];
+    }
+
+    $parts = array_map('trim', explode(',', $value));
+    $parts = array_values(array_filter($parts));
+    return $parts;
+}
+
+function travel_get_query_list($key, array $allowed = []) {
+    $values = travel_get_query_array($key);
+    if (!$values) {
+        return '';
+    }
+
+    $values = array_map('strtoupper', $values);
+
+    if ($allowed) {
+        $values = array_values(array_intersect($values, $allowed));
+    }
+
+    $values = array_values(array_unique($values));
+    return implode(',', $values);
+}
+
+function travel_get_query_int($key, $default, $min, $max) {
+    if (!isset($_GET[$key])) {
+        return $default;
+    }
+
+    $raw = travel_get_query_value($key);
+    if ($raw === '') {
+        return $default;
+    }
+
+    $value = (int) $raw;
+    if ($value < $min) {
+        return $min;
+    }
+    if ($value > $max) {
+        return $max;
+    }
+    return $value;
+}
+
+function travel_get_query_locale($default) {
+    $locale = travel_get_query_value('locale');
+    if (!$locale) {
+        return $default;
+    }
+
+    $locale = str_replace('-', '_', $locale);
+    $locale = preg_replace('/[^A-Za-z_]/', '', $locale);
+
+    if (preg_match('/^[A-Za-z]{2}_[A-Za-z]{2}$/', $locale)) {
+        $locale = strtolower(substr($locale, 0, 2)) . '_' . strtoupper(substr($locale, 3, 2));
+        return $locale;
+    }
+
+    return $default;
+}
+
+function travel_get_query_domain($default) {
+    $domain = strtoupper(travel_get_query_value('domain'));
+    if ($domain && preg_match('/^[A-Z]{2}$/', $domain)) {
+        return $domain;
+    }
+
+    return $default;
+}
+
+function travel_get_children_ages_param() {
+    if (!isset($_GET['children_ages'])) {
+        return '';
+    }
+
+    $raw = wp_unslash($_GET['children_ages']);
+    if (is_array($raw)) {
+        $raw = implode(',', $raw);
+    }
+
+    $raw = sanitize_text_field($raw);
+    $raw = preg_replace('/[^0-9,]/', '', $raw);
+    $raw = trim($raw, ',');
+    return $raw;
+}
+
+function travel_set_hotel_debug(array $debug) {
+    $GLOBALS['travel_hotel_debug'] = $debug;
+}
+
+function travel_get_hotel_debug() {
+    return isset($GLOBALS['travel_hotel_debug']) && is_array($GLOBALS['travel_hotel_debug'])
+        ? $GLOBALS['travel_hotel_debug']
+        : [];
+}
+
 function travel_parse_date($value) {
     if (!$value || !is_string($value)) {
         return '';
@@ -135,8 +256,16 @@ function travel_parse_date($value) {
 }
 
 function travel_get_search_dates() {
-    $checkin = travel_parse_date(isset($_GET['checkin']) ? $_GET['checkin'] : '');
-    $checkout = travel_parse_date(isset($_GET['checkout']) ? $_GET['checkout'] : '');
+    $checkin_input = travel_get_query_value('checkin_date');
+    if ($checkin_input === '') {
+        $checkin_input = travel_get_query_value('checkin');
+    }
+    $checkout_input = travel_get_query_value('checkout_date');
+    if ($checkout_input === '') {
+        $checkout_input = travel_get_query_value('checkout');
+    }
+    $checkin = travel_parse_date($checkin_input);
+    $checkout = travel_parse_date($checkout_input);
 
     $checkin_ts = $checkin ? strtotime($checkin . ' 00:00:00 UTC') : strtotime('+30 days');
     if (!$checkin_ts) {
@@ -252,7 +381,7 @@ function travel_extract_region_candidate($data) {
     return [];
 }
 
-function travel_fetch_region($query, $locale, $domain, $headers) {
+function travel_fetch_region($query, $locale, $domain, $headers, $search_terms = null) {
     $query = trim((string) $query);
     if ($query === '') {
         return new WP_Error('travel_missing_query', 'Search query missing.');
@@ -264,7 +393,9 @@ function travel_fetch_region($query, $locale, $domain, $headers) {
         return $cached;
     }
 
-    $search_terms = array_merge([$query], travel_region_fallback_terms($query));
+    if ($search_terms === null) {
+        $search_terms = array_merge([$query], travel_region_fallback_terms($query));
+    }
 
     foreach ($search_terms as $term) {
         $data = travel_remote_get('/v2/regions', [
@@ -279,6 +410,7 @@ function travel_fetch_region($query, $locale, $domain, $headers) {
 
         $region = travel_extract_region_candidate($data);
         if (!empty($region['id'])) {
+            $region['term'] = $term;
             set_transient($cache_key, $region, 6 * HOUR_IN_SECONDS);
             return $region;
         }
@@ -436,11 +568,16 @@ function travel_get_hotel_results($query) {
     $query = trim((string) $query);
     $query = sanitize_text_field($query);
     if ($query === '') {
+        travel_set_hotel_debug([]);
         return [];
     }
 
     $api_key = travel_get_rapidapi_key();
     if (!$api_key) {
+        travel_set_hotel_debug([
+            'query' => $query,
+            'error' => 'RapidAPI key is not configured.',
+        ]);
         return new WP_Error('travel_missing_key', 'RapidAPI key is not configured.');
     }
 
@@ -449,56 +586,172 @@ function travel_get_hotel_results($query) {
         'x-rapidapi-host' => travel_get_rapidapi_host(),
     ];
 
-    $locale = travel_get_rapidapi_locale();
-    $domain = travel_get_rapidapi_domain();
+    $locale = travel_get_query_locale(travel_get_rapidapi_locale());
+    $domain = travel_get_query_domain(travel_get_rapidapi_domain());
 
     list($checkin, $checkout) = travel_get_search_dates();
-    $adults = isset($_GET['adults']) ? (int) $_GET['adults'] : 1;
-    if ($adults < 1) {
-        $adults = 1;
-    }
-    if ($adults > 7) {
-        $adults = 7;
+    $adults = travel_get_query_int('adults_number', 1, 1, 7);
+    if (!isset($_GET['adults_number']) && isset($_GET['adults'])) {
+        $adults = travel_get_query_int('adults', 1, 1, 7);
     }
 
-    $cache_key = 'travel_hotels_' . md5($query . '|' . $checkin . '|' . $checkout . '|' . $adults . '|' . $locale . '|' . $domain);
-    $cached = get_transient($cache_key);
-    if ($cached && is_array($cached)) {
-        return $cached;
+    $region_override = 0;
+    if (isset($_GET['region_id'])) {
+        $region_override = (int) travel_get_query_value('region_id');
+        if ($region_override < 1) {
+            $region_override = 0;
+        }
     }
 
-    $region = travel_fetch_region($query, $locale, $domain, $headers);
-    if (is_wp_error($region)) {
-        return $region;
+    $region_terms = array_merge([$query], travel_region_fallback_terms($query));
+
+    $debug = [
+        'query' => $query,
+        'locale' => $locale,
+        'domain' => $domain,
+        'checkin_date' => $checkin,
+        'checkout_date' => $checkout,
+        'adults_number' => $adults,
+        'region_terms' => $region_terms,
+    ];
+
+    if ($region_override) {
+        $region = [
+            'id' => (string) $region_override,
+            'name' => '',
+            'term' => 'manual',
+        ];
+        $debug['region_source'] = 'manual';
+    } else {
+        $region = travel_fetch_region($query, $locale, $domain, $headers, $region_terms);
+        if (is_wp_error($region)) {
+            $debug['error'] = $region->get_error_message();
+            travel_set_hotel_debug($debug);
+            return $region;
+        }
+        $debug['region_source'] = 'lookup';
     }
+
+    $debug['region'] = $region;
+
+    $host = travel_get_rapidapi_host();
+    if (!empty($region['term']) && $region['term'] !== 'manual') {
+        $debug['region_request_url'] = add_query_arg([
+            'locale' => $locale,
+            'domain' => $domain,
+            'query' => $region['term'],
+        ], 'https://' . $host . '/v2/regions');
+    }
+
+    $allowed_payment_types = ['GIFT_CARD', 'PAY_LATER', 'FREE_CANCELLATION'];
+    $allowed_lodging_types = ['HOSTAL', 'APARTMENT', 'APART_HOTEL', 'CHALET', 'HOTEL', 'RYOKAN', 'BED_AND_BREAKFAST', 'HOSTEL'];
+    $allowed_amenities = [
+        'SPA_ON_SITE',
+        'WIFI',
+        'HOT_TUB',
+        'FREE_AIRPORT_TRANSPORTATION',
+        'POOL',
+        'GYM',
+        'OCEAN_VIEW',
+        'WATER_PARK',
+        'BALCONY_OR_TERRACE',
+        'KITCHEN_KITCHENETTE',
+        'ELECTRIC_CAR',
+        'PARKING',
+        'CRIB',
+        'RESTAURANT_IN_HOTEL',
+        'PETS',
+        'WASHER_DRYER',
+        'CASINO',
+        'AIR_CONDITIONING',
+    ];
+    $allowed_accessibility = [
+        'SIGN_LANGUAGE_INTERPRETER',
+        'STAIR_FREE_PATH',
+        'SERVICE_ANIMAL',
+        'IN_ROOM_ACCESSIBLE',
+        'ROLL_IN_SHOWER',
+        'ACCESSIBLE_BATHROOM',
+        'ELEVATOR',
+        'ACCESSIBLE_PARKING',
+    ];
+    $allowed_sort = ['REVIEW', 'PRICE_LOW_TO_HIGH', 'PRICE_HIGH_TO_LOW'];
+
+    $available_filter = strtoupper(travel_get_query_value('available_filter'));
+    $available_filter = $available_filter === 'SHOW_AVAILABLE_ONLY' ? $available_filter : '';
+
+    $star_ratings = travel_get_query_array('star_rating_ids');
+    if (!$star_ratings) {
+        $star_ratings = ['3', '4', '5'];
+    }
+    $star_ratings = array_values(array_unique(array_filter($star_ratings, function ($value) {
+        $value = (int) $value;
+        return $value >= 1 && $value <= 5;
+    })));
+    $star_rating_ids = $star_ratings ? implode(',', $star_ratings) : '';
+
+    $payment_type = travel_get_query_list('payment_type', $allowed_payment_types);
+    $lodging_type = travel_get_query_list('lodging_type', $allowed_lodging_types);
+    $amenities = travel_get_query_list('amenities', $allowed_amenities);
+    $accessibility = travel_get_query_list('accessibility', $allowed_accessibility);
+    $meal_plan = travel_get_query_list('meal_plan', ['FREE_BREAKFAST']);
+
+    $sort_order = strtoupper(travel_get_query_value('sort_order'));
+    if (!in_array($sort_order, $allowed_sort, true)) {
+        $sort_order = 'REVIEW';
+    }
+
+    $page_number = travel_get_query_int('page_number', 1, 1, 500);
+    $price_max = travel_get_query_int('price_max', 500, 1, 1000000);
+    $price_min = travel_get_query_int('price_min', 10, 0, 1000000);
+    $guest_rating_min = travel_get_query_int('guest_rating_min', 8, 7, 9);
+    $children_ages = travel_get_children_ages_param();
 
     $params = [
-        'price_max' => isset($_GET['price_max']) ? (int) $_GET['price_max'] : 500,
+        'price_max' => $price_max,
         'locale' => $locale,
-        'available_filter' => 'SHOW_AVAILABLE_ONLY',
-        'star_rating_ids' => isset($_GET['star_rating_ids']) ? sanitize_text_field($_GET['star_rating_ids']) : '3,4,5',
-        'page_number' => 1,
-        'payment_type' => isset($_GET['payment_type']) ? sanitize_text_field($_GET['payment_type']) : '',
-        'children_ages' => isset($_GET['children_ages']) ? sanitize_text_field($_GET['children_ages']) : '',
+        'available_filter' => $available_filter,
+        'star_rating_ids' => $star_rating_ids,
+        'page_number' => $page_number,
+        'payment_type' => $payment_type,
+        'children_ages' => $children_ages,
         'adults_number' => $adults,
         'domain' => $domain,
         'region_id' => $region['id'],
         'checkout_date' => $checkout,
-        'sort_order' => isset($_GET['sort_order']) ? sanitize_text_field($_GET['sort_order']) : 'REVIEW',
-        'lodging_type' => isset($_GET['lodging_type']) ? sanitize_text_field($_GET['lodging_type']) : 'HOTEL,HOSTEL,APART_HOTEL',
+        'sort_order' => $sort_order,
+        'lodging_type' => $lodging_type,
         'checkin_date' => $checkin,
-        'amenities' => isset($_GET['amenities']) ? sanitize_text_field($_GET['amenities']) : '',
-        'guest_rating_min' => isset($_GET['guest_rating_min']) ? (int) $_GET['guest_rating_min'] : 0,
-        'price_min' => isset($_GET['price_min']) ? (int) $_GET['price_min'] : 10,
-        'meal_plan' => isset($_GET['meal_plan']) ? sanitize_text_field($_GET['meal_plan']) : '',
+        'amenities' => $amenities,
+        'guest_rating_min' => $guest_rating_min,
+        'price_min' => $price_min,
+        'accessibility' => $accessibility,
+        'meal_plan' => $meal_plan,
     ];
 
     $params = array_filter($params, function ($value) {
         return $value !== '' && $value !== null;
     });
 
+    $debug['hotel_params'] = $params;
+    $debug['hotel_request_url'] = add_query_arg($params, 'https://' . $host . '/v3/hotels/search');
+
+    $cache_key = 'travel_hotels_' . md5(wp_json_encode($params));
+    $cached = get_transient($cache_key);
+    if ($cached && is_array($cached)) {
+        $debug['cached'] = true;
+        if (isset($cached['items']) && is_array($cached['items'])) {
+            $debug['result_count'] = count($cached['items']);
+        }
+        travel_set_hotel_debug($debug);
+        return $cached;
+    }
+
     $data = travel_remote_get('/v3/hotels/search', $params, $headers);
     if (is_wp_error($data)) {
+        $debug['error'] = $data->get_error_message();
+        $debug['error_data'] = $data->get_error_data();
+        travel_set_hotel_debug($debug);
         return $data;
     }
 
@@ -513,6 +766,9 @@ function travel_get_hotel_results($query) {
         }
         $items[] = $normalized;
     }
+
+    $debug['result_count'] = count($items);
+    travel_set_hotel_debug($debug);
 
     $results = [
         'query' => $query,

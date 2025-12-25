@@ -3,6 +3,8 @@ get_header();
 $search_query = get_search_query();
 $hotel_results = travel_get_hotel_results($search_query);
 $has_hotel_results = !is_wp_error($hotel_results) && !empty($hotel_results['items']);
+$debug_enabled = current_user_can('manage_options') && isset($_GET['debug']) && $_GET['debug'];
+$debug_data = $debug_enabled ? travel_get_hotel_debug() : [];
 ?>
 
 <section class="section search-results">
@@ -19,6 +21,13 @@ $has_hotel_results = !is_wp_error($hotel_results) && !empty($hotel_results['item
             </h1>
             <?php get_search_form(); ?>
         </div>
+
+        <?php if ($debug_enabled) : ?>
+            <div class="debug-panel">
+                <h2><?php esc_html_e('Debug query params', 'travel'); ?></h2>
+                <pre class="debug-code"><?php echo esc_html(wp_json_encode($debug_data, JSON_PRETTY_PRINT)); ?></pre>
+            </div>
+        <?php endif; ?>
 
         <?php if ($search_query !== '') : ?>
             <?php if ($has_hotel_results) : ?>
