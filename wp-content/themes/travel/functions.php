@@ -807,6 +807,9 @@ function travel_get_hotel_results($query) {
 
     $payment_type = travel_get_query_list('payment_type', $allowed_payment_types);
     $lodging_type = travel_get_query_list('lodging_type', $allowed_lodging_types);
+    if (!$lodging_type) {
+        $lodging_type = 'HOTEL,HOSTEL,APART_HOTEL';
+    }
     $amenities = travel_get_query_list('amenities', $allowed_amenities);
     $accessibility = travel_get_query_list('accessibility', $allowed_accessibility);
     $meal_plan = travel_get_query_list('meal_plan', ['FREE_BREAKFAST']);
@@ -817,7 +820,7 @@ function travel_get_hotel_results($query) {
     }
 
     $page_number = travel_get_query_int('page_number', 1, 1, 500);
-    $price_max = travel_get_query_int('price_max', 500, 1, 1000000);
+    $price_max = travel_get_query_int('price_max', 5000, 1, 1000000);
     $price_min = travel_get_query_int('price_min', 10, 0, 1000000);
     $guest_rating_min = travel_get_query_int('guest_rating_min', 8, 7, 9);
     $children_ages = travel_get_children_ages_param();

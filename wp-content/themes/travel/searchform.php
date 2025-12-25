@@ -23,7 +23,7 @@ if ($adults_value > 7) {
 
 $children_ages_value = isset($_GET['children_ages']) ? sanitize_text_field(wp_unslash($_GET['children_ages'])) : '';
 $price_min_value = isset($_GET['price_min']) ? sanitize_text_field(wp_unslash($_GET['price_min'])) : '10';
-$price_max_value = isset($_GET['price_max']) ? sanitize_text_field(wp_unslash($_GET['price_max'])) : '500';
+$price_max_value = isset($_GET['price_max']) ? sanitize_text_field(wp_unslash($_GET['price_max'])) : '5000';
 $guest_rating_value = isset($_GET['guest_rating_min']) ? sanitize_text_field(wp_unslash($_GET['guest_rating_min'])) : '8';
 $page_number_value = isset($_GET['page_number']) ? sanitize_text_field(wp_unslash($_GET['page_number'])) : '1';
 $region_id_value = isset($_GET['region_id']) ? sanitize_text_field(wp_unslash($_GET['region_id'])) : '';
@@ -57,16 +57,10 @@ if (!$lodging_selected) {
     $lodging_selected = ['HOTEL', 'HOSTEL', 'APART_HOTEL'];
 }
 $payment_selected = $parse_list('payment_type');
-if (!$payment_selected) {
-    $payment_selected = ['PAY_LATER', 'FREE_CANCELLATION'];
-}
 $amenities_selected = $parse_list('amenities');
-if (!$amenities_selected) {
-    $amenities_selected = ['WIFI', 'PARKING'];
-}
 $accessibility_selected = $parse_list('accessibility');
 $meal_plan_value = isset($_GET['meal_plan']) ? sanitize_text_field(wp_unslash($_GET['meal_plan'])) : 'FREE_BREAKFAST';
-$available_only = isset($_GET['available_filter']) ? sanitize_text_field(wp_unslash($_GET['available_filter'])) === 'SHOW_AVAILABLE_ONLY' : true;
+$available_only = isset($_GET['available_filter']) ? sanitize_text_field(wp_unslash($_GET['available_filter'])) === 'SHOW_AVAILABLE_ONLY' : false;
 $debug_checked = isset($_GET['debug']) && $_GET['debug'];
 $filters_open = function_exists('is_front_page') && is_front_page();
 ?>
@@ -103,7 +97,7 @@ $filters_open = function_exists('is_front_page') && is_front_page();
                 </div>
                 <div class="field">
                     <label for="price-max"><?php esc_html_e('Price max', 'travel'); ?></label>
-                    <input type="number" id="price-max" name="price_max" min="1" max="1000000" value="<?php echo esc_attr($price_max_value); ?>" placeholder="500">
+                    <input type="number" id="price-max" name="price_max" min="1" max="1000000" value="<?php echo esc_attr($price_max_value); ?>" placeholder="5000">
                 </div>
                 <div class="field">
                     <label for="guest-rating"><?php esc_html_e('Guest rating min', 'travel'); ?></label>

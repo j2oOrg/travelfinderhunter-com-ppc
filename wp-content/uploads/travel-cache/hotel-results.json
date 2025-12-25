@@ -1,0 +1,2005 @@
+{
+  "updated": "2025-12-25T15:19:43.1679352Z",
+  "items": [
+    {
+      "price": "€947",
+      "rating": "9.4",
+      "name": "La Isla Bonita",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/100000000/99620000/99610300/99610203/0216eaad.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "20",
+      "link": "https://www.hotels.com/ho3188526496/la-isla-bonita-punta-rucia-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€4,393",
+      "rating": "9.6",
+      "name": "Grand Hotel du Palais Royal",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/6000000/5580000/5576300/5576207/f2cd430c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "629",
+      "link": "https://www.hotels.com/ho179438624/grand-hotel-du-palais-royal-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,222",
+      "rating": "9.4",
+      "name": "Palácio do Governador - Lisbon Hotel & Spa",
+      "location": "Belém",
+      "image": "https://images.trvl-media.com/lodging/13000000/12500000/12499700/12499645/5fcfa0a1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "600",
+      "link": "https://www.hotels.com/ho560471/palacio-do-governador-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,753",
+      "rating": "9.6",
+      "name": "Hôtel Moliere",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/70000/68500/68493/8af430c0.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "670",
+      "link": "https://www.hotels.com/ho483818/hotel-moliere-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€747",
+      "rating": "9.6",
+      "name": "Boemio FLH Hotels",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/89000000/88660000/88650100/88650018/183db0e3.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "416",
+      "link": "https://www.hotels.com/ho2837800576/boemio-flh-hotels-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€319",
+      "rating": "9.0",
+      "name": "Hotel Class Colonial",
+      "location": "8 min walk to Playa Montesinos",
+      "image": "https://images.trvl-media.com/lodging/27000000/26890000/26888700/26888693/dd7a603a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "151",
+      "link": "https://www.hotels.com/ho861438176/hotel-class-colonial-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,163",
+      "rating": "9.4",
+      "name": "Hôtel Helussi",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/9000000/8410000/8408700/8408667/7e99e5ba.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "765",
+      "link": "https://www.hotels.com/ho464417/hotel-helussi-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,225",
+      "rating": "9.2",
+      "name": "Le Consulat",
+      "location": "Chiado",
+      "image": "https://images.trvl-media.com/lodging/19000000/18410000/18408900/18408880/4c870eaf.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "446",
+      "link": "https://www.hotels.com/ho694135/le-consulat-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€981",
+      "rating": "9.4",
+      "name": "Homewood Suites by Hilton Santo Domingo, Dominican Republic",
+      "location": "Santo Domingo",
+      "image": "https://images.trvl-media.com/lodging/38000000/37630000/37627600/37627535/40488be4.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "707",
+      "link": "https://www.hotels.com/ho1205081120/homewood-suites-by-hilton-santo-domingo-dominican-republic-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€3,920",
+      "rating": "9.2",
+      "name": "Palacio Provincial San Juan, Curio Collection by Hilton",
+      "location": "San Juan",
+      "image": "https://images.trvl-media.com/lodging/60000000/59950000/59945800/59945750/7ae3d71b.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "807",
+      "link": "https://www.hotels.com/ho1919264000/palacio-provincial-san-juan-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€807",
+      "rating": "8.8",
+      "name": "Hotel Mayaguez Plaza, BW Signature Collection",
+      "location": "Mayagüez",
+      "image": "https://images.trvl-media.com/lodging/2000000/1220000/1217500/1217464/cdfc581d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho238346/mayaguez-plaza-hotel-surestay-collection-by-best-western-mayaguez-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€1,451",
+      "rating": "9.0",
+      "name": "DUO Hotel Lisbon, Curio Collection by Hilton",
+      "location": "Misericórdia",
+      "image": "https://images.trvl-media.com/lodging/104000000/103600000/103599500/103599490/cc059a4e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "30",
+      "link": "https://www.hotels.com/ho3316183680/duo-hotel-lisbon-curio-collection-by-hilton-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,413",
+      "rating": "9.2",
+      "name": "Hotel Atmospheres",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/480000/470900/470866/079a386c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho129483/hotel-atmospheres-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€929",
+      "rating": "9.4",
+      "name": "Faranda Single 1 Punta Cana Adults Only",
+      "location": "Punta Cana",
+      "image": "https://images.trvl-media.com/lodging/102000000/101760000/101751200/101751188/16901bff.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "534",
+      "link": "https://www.hotels.com/ho3257038016/faranda-single-1-punta-cana-adults-only-punta-cana-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,793",
+      "rating": "10",
+      "name": "Hotel das Amoreiras - Small Luxury Hotels of the World",
+      "location": "Santo Antonio",
+      "image": "https://images.trvl-media.com/lodging/79000000/78380000/78370700/78370665/c3e6fb0d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "101",
+      "link": "https://www.hotels.com/ho2508861280/hotel-das-amoreiras-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,223",
+      "rating": "9.6",
+      "name": "Courtyard By Marriott Santo Domingo Piantini",
+      "location": "Santo Domingo",
+      "image": "https://images.trvl-media.com/lodging/97000000/96730000/96727700/96727637/3ea1cdaf.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "94",
+      "link": "https://www.hotels.com/ho3096284384/courtyard-by-marriott-santo-domingo-piantini-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,509",
+      "rating": "9.0",
+      "name": "The Courtleigh Hotel and Suites",
+      "location": "Kingston",
+      "image": "https://images.trvl-media.com/lodging/1000000/480000/470200/470179/a412135d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho172548/the-courtleigh-hotel-and-suites-kingston-jamaica/",
+      "external": true
+    },
+    {
+      "price": "€1,477",
+      "rating": "9.2",
+      "name": "Hôtel La Nouvelle République & Hammam",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/20000000/19300000/19291700/19291630/41eeaa47.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "496",
+      "link": "https://www.hotels.com/ho618332160/hotel-la-nouvelle-republique-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,318",
+      "rating": "9.0",
+      "name": "OKKO Hotels Paris Gare de l'Est",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/35000000/34370000/34366400/34366332/2ac543dc.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho1100722624/okko-hotels-paris-gare-de-l-est-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,359",
+      "rating": "9.0",
+      "name": "Courtyard by Marriott Port Of Spain",
+      "location": "Port of Spain",
+      "image": "https://images.trvl-media.com/lodging/2000000/1150000/1149900/1149889/e1c05816.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "601",
+      "link": "https://www.hotels.com/ho225535/courtyard-by-marriott-port-of-spain-port-of-spain-trinidad-and-tobago/",
+      "external": true
+    },
+    {
+      "price": "€2,845",
+      "rating": "9.4",
+      "name": "Hotel Dame des Arts",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/4000000/3120000/3117400/3117356/6507bd6d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "447",
+      "link": "https://www.hotels.com/ho335847/hotel-dame-des-arts-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,102",
+      "rating": "9.8",
+      "name": "Avenida Palace",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/2100/2061/07fc9253.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1002",
+      "link": "https://www.hotels.com/ho175029/avenida-palace-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,934",
+      "rating": "9.4",
+      "name": "Hotel du Cadran",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/50000/44900/44833/659d0ff2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho188369/hotel-du-cadran-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,228",
+      "rating": "9.0",
+      "name": "AC Hotel by Marriott Kingston, Jamaica",
+      "location": "Kingston",
+      "image": "https://images.trvl-media.com/lodging/36000000/35560000/35559600/35559503/5af7ff9f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "902",
+      "link": "https://www.hotels.com/ho1138904096/ac-hotel-by-marriott-kingston-jamaica-kingston-jamaica/",
+      "external": true
+    },
+    {
+      "price": "€1,369",
+      "rating": "10",
+      "name": "Casa Veintiuno",
+      "location": "6 min walk to Sosúa Beach",
+      "image": "https://images.trvl-media.com/lodging/100000000/99590000/99580500/99580419/2b27a3b6.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "3",
+      "link": "https://www.hotels.com/ho3187573408/casa-veintiuno-sosua-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,441",
+      "rating": "9.6",
+      "name": "Miiro Le Grand Hôtel Cayré",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/104000000/103580000/103573300/103573280/70075a32.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "256",
+      "link": "https://www.hotels.com/ho3315344960/le-grand-hotel-cayre-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,365",
+      "rating": "9.6",
+      "name": "Altis Avenida Hotel",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/4000000/3390000/3385900/3385814/e371e133.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho342280/altis-avenida-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,478",
+      "rating": "9.0",
+      "name": "Hotel l'Antoine",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/10000000/9660000/9650100/9650080/b09fdad7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "792",
+      "link": "https://www.hotels.com/ho485309/hotel-l-antoine-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,493",
+      "rating": "9.8",
+      "name": "Palácio Ludovice Wine Experience Hotel",
+      "location": "Bairro Alto",
+      "image": "https://images.trvl-media.com/lodging/72000000/71400000/71395400/71395358/579cd47e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "635",
+      "link": "https://www.hotels.com/ho2285651456/palacio-ludovice-wine-experience-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€809",
+      "rating": "9.2",
+      "name": "Praia do Sal Lisbon Resort and SPA",
+      "location": "9.2 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/28000000/27160000/27154400/27154363/009d08da.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "293",
+      "link": "https://www.hotels.com/ho869939616/praia-do-sal-lisbon-resort-alcochete-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,077",
+      "rating": "9.0",
+      "name": "Pestana CR7 Lisboa",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/16000000/15740000/15737400/15737372/ecd733c2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "841",
+      "link": "https://www.hotels.com/ho613206/pestana-cr7-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€9,542",
+      "rating": "9.4",
+      "name": "Buoy Haus Beach Resort St. Thomas, Autograph Collection",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/96000000/95340000/95332000/95331919/6f8c1f93.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "143",
+      "link": "https://www.hotels.com/ho3051621408/morningstar-buoy-haus-beach-resort-at-frenchman-s-reef-autograph-collection-st-thomas-u-s-virgin-islands/",
+      "external": true
+    },
+    {
+      "price": "€1,000",
+      "rating": "9.0",
+      "name": "EVOLUTION Lisboa Hotel",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/11000000/10180000/10174400/10174395/a21a84e0.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho498596/evolution-lisboa-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€5,499",
+      "rating": "9.6",
+      "name": "Pavillon de la Reine & Spa, Place des Vosges",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/190000/182200/182182/3c25d2b0.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "673",
+      "link": "https://www.hotels.com/ho122238/pavillon-de-la-reine-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€4,187",
+      "rating": "9.2",
+      "name": "Hyatt Regency Paris Etoile",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/1400/1337/ce23890a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1004",
+      "link": "https://www.hotels.com/ho115011/hyatt-regency-paris-etoile-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,604",
+      "rating": "9.8",
+      "name": "Millésime Hôtel",
+      "location": "Saint-Germain-des-Prés",
+      "image": "https://images.trvl-media.com/lodging/12000000/11680000/11679800/11679782/944a8be5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "511",
+      "link": "https://www.hotels.com/ho535710/millesime-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,742",
+      "rating": "9.0",
+      "name": "Hôtel Bourgogne & Montana",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/20000/14800/14768/b5a497e2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "588",
+      "link": "https://www.hotels.com/ho131367/hotel-bourgogne-montana-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,748",
+      "rating": "9.8",
+      "name": "Quinzerie Hotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/46000000/45590000/45586300/45586214/34c9d8a9.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "369",
+      "link": "https://www.hotels.com/ho1459758848/quinzerie-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,215",
+      "rating": "9.8",
+      "name": "Golden Rock Inn",
+      "location": "Gingerland",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/22400/22392/0eced1d0.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "36",
+      "link": "https://www.hotels.com/ho470459/golden-rock-inn-gingerland-st-kitts-and-nevis/",
+      "external": true
+    },
+    {
+      "price": "€1,529",
+      "rating": "9.2",
+      "name": "New Orient Hôtel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/11000000/10260000/10259200/10259148/5be78f9c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "796",
+      "link": "https://www.hotels.com/ho505491/new-orient-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,230",
+      "rating": "9.8",
+      "name": "MACAM Hotel",
+      "location": "Alcântara",
+      "image": "https://images.trvl-media.com/lodging/113000000/112730000/112720500/112720406/f60b1b9a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "27",
+      "link": "https://www.hotels.com/ho3608052992/macam-hotel/",
+      "external": true
+    },
+    {
+      "price": "€1,157",
+      "rating": "9.4",
+      "name": "Hodelpa Gran Almirante Hotel & Casino",
+      "location": "Santiago de los Caballeros",
+      "image": "https://images.trvl-media.com/lodging/1000000/930000/921800/921749/w2560h3837x3y3-a748b591.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1006",
+      "link": "https://www.hotels.com/ho216082/hodelpa-gran-almirante-hotel-casino-santiago-de-los-caballeros-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,994",
+      "rating": "9.0",
+      "name": "Hampton by Hilton St. Thomas",
+      "location": "St. Thomas",
+      "image": "https://images.trvl-media.com/lodging/116000000/115550000/115546600/115546558/5a18811b.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "43",
+      "link": "https://www.hotels.com/ho3698489856/hampton-inn-by-hilton-st-thomas/",
+      "external": true
+    },
+    {
+      "price": "€1,033",
+      "rating": "9.8",
+      "name": "Legacy Hotel Cascais, Curio Collection By Hilton",
+      "location": "Cascais e Estoril, 15.52 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/92000000/91500000/91497500/91497469/a39988fc.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "65",
+      "link": "https://www.hotels.com/ho2928919008/legacy-hotel-cascais-curio-collection-by-hilton-cascais-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,244",
+      "rating": "9.8",
+      "name": "Convent Square Lisbon, Vignette Collection by IHG",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/94000000/93870000/93865700/93865633/a4b63ec5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "332",
+      "link": "https://www.hotels.com/ho3004700256/vignette-collection-convent-square-lisbon-an-ihg-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,078",
+      "rating": "9.2",
+      "name": "Graphik Montparnasse",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/84000000/83920000/83915300/83915212/af73715a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "226",
+      "link": "https://www.hotels.com/ho2686286784/graphik-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,388",
+      "rating": "9.8",
+      "name": "AlmaLusa Baixa & Chiado",
+      "location": "Chiado",
+      "image": "https://images.trvl-media.com/lodging/14000000/13340000/13331000/13330971/54203646.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "866",
+      "link": "https://www.hotels.com/ho568649/almalusa-baixa-chiado-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,893",
+      "rating": "9.2",
+      "name": "Beyond Sunset Resort & Villas",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/9000000/8160000/8151300/8151265/27436d80.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "168",
+      "link": "https://www.hotels.com/ho199459/sunset-resort-villas-treasure-beach-jamaica/",
+      "external": true
+    },
+    {
+      "price": "€3,304",
+      "rating": "9.0",
+      "name": "The Hoxton Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/17000000/16020000/16015800/16015733/a55ae1c6.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "671",
+      "link": "https://www.hotels.com/ho513503456/the-hoxton-paris-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,671",
+      "rating": "9.0",
+      "name": "Mayflower Opéra ",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/13000000/12610000/12605000/12604991/8d489339.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "476",
+      "link": "https://www.hotels.com/ho555429/mayflower-opera-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,717",
+      "rating": "9.4",
+      "name": "Hôtel Augustin - Astotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/21600/21583/804659c2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "584",
+      "link": "https://www.hotels.com/ho114537/hotel-augustin-astotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,659",
+      "rating": "9.0",
+      "name": "Fond Doux Eco Resort",
+      "location": "Soufrière",
+      "image": "https://images.trvl-media.com/lodging/2000000/1830000/1827000/1826960/0d60e454.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "445",
+      "link": "https://www.hotels.com/ho262158/fond-doux-eco-resort-soufriere-st-lucia/",
+      "external": true
+    },
+    {
+      "price": "€1,541",
+      "rating": "9.4",
+      "name": "Appart'City Collection Paris Gare de Lyon",
+      "location": "Bercy",
+      "image": "https://images.trvl-media.com/lodging/96000000/95300000/95294800/95294798/0af5b861.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "272",
+      "link": "https://www.hotels.com/ho3050433536/appartcity-collection-paris-gare-de-lyon-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€6,796",
+      "rating": "9.4",
+      "name": "Calabash Cove Resort And Spa - Adults Only",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/3000000/2480000/2470800/2470747/ec8ca089.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "339",
+      "link": "https://www.hotels.com/ho310067/calabash-cove-resort-and-spa-adults-only-gros-islet-st-lucia/",
+      "external": true
+    },
+    {
+      "price": "€932",
+      "rating": "9.6",
+      "name": "Residence Inn by Marriott Santiago de los Caballeros",
+      "location": "Santiago de los Caballeros",
+      "image": "https://images.trvl-media.com/lodging/102000000/101350000/101340300/101340266/c5c9b2ec.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "277",
+      "link": "https://www.hotels.com/ho3243888512/residence-inn-by-marriott-santiago-de-los-caballeros-santiago-de-los-caballeros-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,946",
+      "rating": "9.0",
+      "name": "Hotel des Marronniers",
+      "location": "Saint-Germain-des-Prés",
+      "image": "https://images.trvl-media.com/lodging/27000000/26890000/26885400/26885302/w8079h5394x7y0-eef2da4e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "247",
+      "link": "https://www.hotels.com/ho861329664/hotel-des-marronniers-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,033",
+      "rating": "9.2",
+      "name": "Hôtel Artus",
+      "location": "Saint-Germain-des-Prés",
+      "image": "https://images.trvl-media.com/lodging/1000000/60000/53600/53532/d185c48c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "983",
+      "link": "https://www.hotels.com/ho119159/hotel-artus-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,073",
+      "rating": "9.2",
+      "name": "Bed & Bike Curacao - Jan Thiel",
+      "location": "Jan Thiel",
+      "image": "https://images.trvl-media.com/lodging/34000000/33760000/33755500/33755467/6e973e27.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "84",
+      "link": "https://www.hotels.com/ho1081174944/bed-bike-curacao-jan-thiel-jan-thiel-curacao/",
+      "external": true
+    },
+    {
+      "price": "€3,012",
+      "rating": "9.0",
+      "name": "Normandy Le Chantier",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/23200/23157/2430b68b.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "345",
+      "link": "https://www.hotels.com/ho115857/normandy-le-chantier-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,040",
+      "rating": "10",
+      "name": "Ocean Oasis Hotel Dominica",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/119000000/118850000/118846100/118846032/dd6eb00d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1",
+      "link": "https://www.hotels.com/ho3804073024/",
+      "external": true
+    },
+    {
+      "price": "€1,133",
+      "rating": "9.2",
+      "name": "Villa Copthall",
+      "location": "Roseau",
+      "image": "https://images.trvl-media.com/lodging/91000000/90230000/90228700/90228610/8d239cc5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "30",
+      "link": "https://www.hotels.com/ho2888315520/villa-copthall-roseau-dominica/",
+      "external": true
+    },
+    {
+      "price": "€1,344",
+      "rating": "9.2",
+      "name": "Eurostars Universal Lisboa",
+      "location": "Parque das Nações",
+      "image": "https://images.trvl-media.com/lodging/71000000/70950000/70946700/70946615/9b32974c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1110",
+      "link": "https://www.hotels.com/ho2271291680/eurostars-universal-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€4,981",
+      "rating": "9.8",
+      "name": "Cane Garden Bay Beach Hotel",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/47000000/46950000/46949900/46949848/2566c510.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "175",
+      "link": "https://www.hotels.com/ho1503395136/quito-s-luxury-inn-cane-garden-bay-british-virgin-islands/",
+      "external": true
+    },
+    {
+      "price": "€24,337",
+      "rating": "9.8",
+      "name": "Le Toiny Hôtel & Beach Club",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/530000/528500/528429/372f985f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "46",
+      "link": "https://www.hotels.com/ho17909728/hotel-le-toiny-st-barthelemy-st-barthelemy/",
+      "external": true
+    },
+    {
+      "price": "€795",
+      "rating": "9.2",
+      "name": "Crowne Plaza Caparica Lisbon by IHG",
+      "location": "6.42 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/2000000/1690000/1688800/1688766/w5467h3648x6y0-25f6ac4c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "394",
+      "link": "https://www.hotels.com/ho256515/aldeia-dos-capuchos-golf-spa-almada-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,574",
+      "rating": "10",
+      "name": "Hôtel Barnett Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/120000000/119300000/119297400/119297348/3385020e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "14",
+      "link": "https://www.hotels.com/ho3818515136/",
+      "external": true
+    },
+    {
+      "price": "€2,821",
+      "rating": "9.6",
+      "name": "Hotel de la Tamise",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/3000000/2530000/2521500/2521444/0a428341.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "481",
+      "link": "https://www.hotels.com/ho428806/hotel-de-la-tamise-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,266",
+      "rating": "10",
+      "name": "Quinta da Maquia Hotel",
+      "location": "Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim, 14.62 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/119000000/118510000/118500600/118500552/7a5027d5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "5",
+      "link": "https://www.hotels.com/ho3793017664/",
+      "external": true
+    },
+    {
+      "price": "€1,279",
+      "rating": "8.8",
+      "name": "Sheraton Santo Domingo Hotel",
+      "location": "13 min walk to Guibia Beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/23100/23011/040172a2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho171731/sheraton-santo-domingo-hotel-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€907",
+      "rating": "9.2",
+      "name": "Le Daum",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/90000000/89170000/89168200/89168106/9d287a98.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "23",
+      "link": "https://www.hotels.com/ho2854379392/le-daum-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,773",
+      "rating": "9.6",
+      "name": "Nuage Hôtel",
+      "location": "8th Arrondissement",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/28000/27903/0f9abcbd.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "154",
+      "link": "https://www.hotels.com/ho288516/hotel-elysees-mermoz-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€876",
+      "rating": "9.4",
+      "name": "Behotelisboa",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/12000000/11950000/11949400/11949309/9c4de154.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1253",
+      "link": "https://www.hotels.com/ho542129/behotelisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€3,220",
+      "rating": "9.0",
+      "name": "Condado Ocean Club - Adults Only",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/19000000/18570000/18567200/18567124/a244f1e1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1533",
+      "link": "https://www.hotels.com/ho595147968/condado-ocean-club-adults-only-san-juan-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€1,496",
+      "rating": "8.8",
+      "name": "ROK Hotel Kingston, Tapestry Collection by Hilton",
+      "location": "Kingston",
+      "image": "https://images.trvl-media.com/lodging/72000000/71560000/71554900/71554883/3213ca97.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1156",
+      "link": "https://www.hotels.com/ho2290756256/rok-hotel-kingston-tapestry-collection-by-hilton-kingston-jamaica/",
+      "external": true
+    },
+    {
+      "price": "€4,303",
+      "rating": "9.6",
+      "name": "Hôtel Louvre Montana",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/28000/27958/69837989.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "345",
+      "link": "https://www.hotels.com/ho121286/hotel-louvre-montana-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,288",
+      "rating": "9.4",
+      "name": "Hotel Bachaumont",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/11000000/10050000/10040300/10040266/3e1c57ec.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "531",
+      "link": "https://www.hotels.com/ho493874/hotel-bachaumont-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€950",
+      "rating": "9.4",
+      "name": "Locke de Santa Joana",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/103000000/102360000/102360000/102359957/2f274b13.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1513",
+      "link": "https://www.hotels.com/ho3276518624/locke-de-santa-joana-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€4,087",
+      "rating": "9.2",
+      "name": "Hôtel Westminster",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/25800/25780/42778643.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "241",
+      "link": "https://www.hotels.com/ho126460/hotel-westminster-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€833",
+      "rating": "9.6",
+      "name": "Estoril Village Guesthouse",
+      "location": "Estoril, 13.59 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/117000000/116290000/116285100/116285084/490cdfa7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "10",
+      "link": "https://www.hotels.com/ho3722122688/estoril-village-guesthouse/",
+      "external": true
+    },
+    {
+      "price": "€2,197",
+      "rating": "9.4",
+      "name": "Hotel R de Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/570000/565300/565252/52195d1e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho439276/hotel-r-de-paris-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€628",
+      "rating": "9.2",
+      "name": "Monte Belvedere Hotel by Shiadu",
+      "location": "Misericórdia",
+      "image": "https://images.trvl-media.com/lodging/6000000/5380000/5370800/5370721/dd5a0af5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "146",
+      "link": "https://www.hotels.com/ho172863072/monte-belvedere-hotel-by-shiadu-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,171",
+      "rating": "9.4",
+      "name": "Embassy Suites by Hilton Santo Domingo",
+      "location": "Santo Domingo",
+      "image": "https://images.trvl-media.com/lodging/8000000/7330000/7324600/7324583/74086d28.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1010",
+      "link": "https://www.hotels.com/ho454850/embassy-suites-by-hilton-santo-domingo-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,312",
+      "rating": "9.6",
+      "name": "Hôtel Seb&Co ",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/114000000/113960000/113952800/113952795/8d139def.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "5",
+      "link": "https://www.hotels.com/ho3647489440/",
+      "external": true
+    },
+    {
+      "price": "€1,096",
+      "rating": "9.8",
+      "name": "Dare Lisbon House",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/25000000/24460000/24451600/24451591/54cef6a5.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "871",
+      "link": "https://www.hotels.com/ho783450912/dare-lisbon-house-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,661",
+      "rating": "9.8",
+      "name": "Wine & Books Lisboa Hotel",
+      "location": "Ajuda",
+      "image": "https://images.trvl-media.com/lodging/71000000/70560000/70554000/70553901/484d77d9.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "234",
+      "link": "https://www.hotels.com/ho2258724832/wine-books-lisboa-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,494",
+      "rating": "9.0",
+      "name": "Hôtel Le Walt by Inwood Hotels",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/870000/863900/863814/f6da791b.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "810",
+      "link": "https://www.hotels.com/ho200478/hotel-le-walt-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,132",
+      "rating": "9.6",
+      "name": "Grande Real Villa Italia",
+      "location": "Cascais e Estoril, 15.48 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/2000000/1650000/1646500/1646457/de41ff77.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho255607/grande-real-villa-italia-cascais-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,532",
+      "rating": "9.4",
+      "name": "9Confidentiel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/28000000/27550000/27541900/27541871/02720bba.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "515",
+      "link": "https://www.hotels.com/ho882339872/9confidentiel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,361",
+      "rating": "9.2",
+      "name": "Hotel Saint Germain",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/3000000/2500000/2499500/2499405/45074ea1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho310463/hotel-saint-germain-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,756",
+      "rating": "9.6",
+      "name": "Padam Hôtel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/84000000/83650000/83644000/83643951/f9c93e5d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "212",
+      "link": "https://www.hotels.com/ho2677606432/padam-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,418",
+      "rating": "9.8",
+      "name": "Almaria Edifício Officina Real",
+      "location": "Bairro Alto",
+      "image": "https://images.trvl-media.com/lodging/25000000/24120000/24117200/24117101/a2f407e1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "114",
+      "link": "https://www.hotels.com/ho772747232/almaria-edificio-officina-real-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,974",
+      "rating": "9.4",
+      "name": "Hôtel Victoire & Germain",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/16000000/15060000/15059700/15059604/80d035a7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "719",
+      "link": "https://www.hotels.com/ho590107/hotel-victoire-germain-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,628",
+      "rating": "9.8",
+      "name": "Montebelo Vista Alegre Lisboa Chiado",
+      "location": "Chiado",
+      "image": "https://images.trvl-media.com/lodging/98000000/97370000/97369000/97368973/c19da455.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "131",
+      "link": "https://www.hotels.com/ho3116807136/montebelo-vista-alegre-lisboa-chiado-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€800",
+      "rating": "9.6",
+      "name": "Hotel Principe Avila",
+      "location": "Avenidas Novas",
+      "image": "https://images.trvl-media.com/lodging/92000000/91230000/91229100/91229060/af84afac.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "602",
+      "link": "https://www.hotels.com/ho2920329920/hotel-principe-avila-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€838",
+      "rating": "9.2",
+      "name": "Hotel Atlantis",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/9000000/8740000/8731000/8730942/40a52ca8.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "194",
+      "link": "https://www.hotels.com/ho468885/hotel-atlantis-las-terrenas-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,838",
+      "rating": "9.6",
+      "name": "Kimpton Las Mercedes by IHG",
+      "location": "11 min walk to Playa Montesinos",
+      "image": "https://images.trvl-media.com/lodging/104000000/103390000/103384000/103383987/cf9acab1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "148",
+      "link": "https://www.hotels.com/ho3309287584/kimpton-las-mercedes-an-ihg-hotel-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,027",
+      "rating": "9.4",
+      "name": "Hotel Residence Henri IV",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/110000/106700/106612/06587153.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "377",
+      "link": "https://www.hotels.com/ho282337/residence-henri-iv-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€834",
+      "rating": "9.2",
+      "name": "Lagoas Park Hotel",
+      "location": "Porto Salvo, 9.24 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/2000000/1710000/1709000/1708908/ae62a10f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1003",
+      "link": "https://www.hotels.com/ho257057/lagoas-park-hotel-oeiras-portugal/",
+      "external": true
+    },
+    {
+      "price": "€543",
+      "rating": "9.4",
+      "name": "Holiday Inn Express and Suites Lisbon Principe Real by IHG",
+      "location": "Santo Antonio",
+      "image": "https://images.trvl-media.com/lodging/1000000/880000/876700/876690/01c5cbf1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "50",
+      "link": "https://www.hotels.com/ho224256/holiday-inn-express-and-suites-lisbon-principe-real-by-ihg/",
+      "external": true
+    },
+    {
+      "price": "€1,045",
+      "rating": "9.8",
+      "name": "Eurostars Lisboa Baixa",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/89000000/88300000/88293800/88293770/53bb0399.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "229",
+      "link": "https://www.hotels.com/ho2826400640/eurostars-lisboa-baixa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€458",
+      "rating": "9.2",
+      "name": "Stay Here Suites",
+      "location": "8 min walk to Guibia Beach",
+      "image": "https://images.trvl-media.com/lodging/94000000/93510000/93506800/93506711/78c105af.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "214",
+      "link": "https://www.hotels.com/ho2993214752/stay-here-suites-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,595",
+      "rating": "9.0",
+      "name": "Hotel Ares Eiffel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/4100/4086/5d4bc2af.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho309567/hotel-ares-eiffel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,720",
+      "rating": "8.8",
+      "name": "Crowne Plaza Santo Domingo by IHG",
+      "location": "15 min walk to Guibia Beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/8000/7961/487fd863.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho131056/crowne-plaza-santo-domingo-an-ihg-hotel-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€1,066",
+      "rating": "9.2",
+      "name": " Hotel Florescente",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/3000000/2690000/2689300/2689212/ffde8a71.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho298693/residencial-florescente-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€737",
+      "rating": "9.2",
+      "name": "Mama Shelter Lisboa ",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/70000000/69870000/69863300/69863295/483f7bfc.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "578",
+      "link": "https://www.hotels.com/ho2236625440/mama-shelter-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,345",
+      "rating": "9.0",
+      "name": "Holiday Inn Santo Domingo by IHG",
+      "location": "Santo Domingo",
+      "image": "https://images.trvl-media.com/lodging/4000000/3030000/3024000/3023962/6d4fb491.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "971",
+      "link": "https://www.hotels.com/ho332615/holiday-inn-santo-domingo-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€517",
+      "rating": "9.0",
+      "name": "Numa Lisbon Rato",
+      "location": "Santo Antonio",
+      "image": "https://images.trvl-media.com/lodging/102000000/101160000/101150900/101150889/236e0573.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "131",
+      "link": "https://www.hotels.com/ho3237828448/numa-i-voga-rooms-apartments-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€835",
+      "rating": "9.4",
+      "name": "Rossio Plaza Hotel",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/72000000/71740000/71732100/71732091/190330ae.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1334",
+      "link": "https://www.hotels.com/ho2296426912/rossio-plaza-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,006",
+      "rating": "9.4",
+      "name": "Hôtel Amoi Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/75000000/74100000/74092600/74092581/6c23559c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "151",
+      "link": "https://www.hotels.com/ho2371962592/hotel-amoi-paris-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€704",
+      "rating": "9.2",
+      "name": "Hotel Ikonik Lisboa",
+      "location": "Parque das Nações",
+      "image": "https://images.trvl-media.com/lodging/71000000/70940000/70934600/70934553/47037430.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1161",
+      "link": "https://www.hotels.com/ho2270905696/hotel-ikonik-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,850",
+      "rating": "9.6",
+      "name": "Roi de Sicile Rivoli",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/10000000/9550000/9542000/9541968/6a86bb76.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "277",
+      "link": "https://www.hotels.com/ho482812/roi-de-sicile-rivoli-luxury-apartment-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,019",
+      "rating": "9.0",
+      "name": "Renaissance Santo Domingo Jaragua Hotel & Casino",
+      "location": "9 min walk to Guibia Beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/30000/22500/22498/dbbd0fab.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1003",
+      "link": "https://www.hotels.com/ho128538/renaissance-santo-domingo-jaragua-hotel-casino-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€3,136",
+      "rating": "9.4",
+      "name": "Bayside Boutique Hotel - Blue Bay Golf & Beach Resort",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/10000000/9410000/9402400/9402334/30f4b708.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "305",
+      "link": "https://www.hotels.com/ho480103/bayside-boutique-hotel-sint-michiel-curacao/",
+      "external": true
+    },
+    {
+      "price": "€1,657",
+      "rating": "10",
+      "name": "Art Legacy Hotel Baixa-Chiado",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/100000000/99680000/99673200/99673129/8ce60a73.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "176",
+      "link": "https://www.hotels.com/ho3190540128/art-legacy-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,018",
+      "rating": "10",
+      "name": "ME Lisbon by Meliá",
+      "location": "Avenidas Novas",
+      "image": "https://images.trvl-media.com/lodging/111000000/110550000/110549900/110549834/bbf91458.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "23",
+      "link": "https://www.hotels.com/ho3538594688/",
+      "external": true
+    },
+    {
+      "price": "€1,482",
+      "rating": "9.6",
+      "name": "Almaria Edifício da Corte",
+      "location": "Misericórdia",
+      "image": "https://images.trvl-media.com/lodging/20000000/19240000/19238100/19238084/ea62d7e7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "198",
+      "link": "https://www.hotels.com/ho616618688/almaria-edificio-da-corte-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€891",
+      "rating": "9.6",
+      "name": "Memmo Alfama - Design Hotels",
+      "location": "Santa Maria Maior",
+      "image": "https://images.trvl-media.com/lodging/7000000/6240000/6233000/6232919/6b822f1f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho435903/memmo-alfama-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€3,431",
+      "rating": "9.2",
+      "name": "Aire de O:live",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/530000/527600/527599/8d4c39ed.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "370",
+      "link": "https://www.hotels.com/ho186605/san-juan-water-and-beach-club-carolina-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€748",
+      "rating": "9.4",
+      "name": "All Seasons Hotel Bayahibe",
+      "location": "9 min walk to Bayahibe Beach",
+      "image": "https://images.trvl-media.com/lodging/110000000/109390000/109387700/109387689/113ea57e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "92",
+      "link": "https://www.hotels.com/ho3501406048/",
+      "external": true
+    },
+    {
+      "price": "€1,882",
+      "rating": "9.2",
+      "name": "Courtyard by Marriott Curacao",
+      "location": "Willemstad",
+      "image": "https://images.trvl-media.com/lodging/87000000/86140000/86139600/86139569/9ceb8f4c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "360",
+      "link": "https://www.hotels.com/ho2757466208/courtyard-by-marriott-curacao-willemstad-curacao/",
+      "external": true
+    },
+    {
+      "price": "€1,056",
+      "rating": "9.8",
+      "name": "Maison urbaine",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/12000000/12000000/11996800/11996771/de80f88c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "17",
+      "link": "https://www.hotels.com/ho542143/hotel-trema-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,316",
+      "rating": "9.4",
+      "name": "Manolita Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/84000000/83420000/83410300/83410266/cedf7d01.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "39",
+      "link": "https://www.hotels.com/ho2670128512/manolita-paris-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,784",
+      "rating": "9.0",
+      "name": "Secret Harbour Boutique Hotel and Marina",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/22000000/21320000/21312500/21312444/9ba0b16c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "189",
+      "link": "https://www.hotels.com/ho682998208/secret-harbour-boutique-hotel-and-marina-st-george-s-grenada/",
+      "external": true
+    },
+    {
+      "price": "€1,214",
+      "rating": "9.0",
+      "name": "Ponce Plaza Hotel & Casino",
+      "location": "Ponce",
+      "image": "https://images.trvl-media.com/lodging/3000000/2840000/2836400/2836309/ab1ae408.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho325177/ponce-plaza-hotel-casino-ponce-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€10,311",
+      "rating": "9.8",
+      "name": "Kimpton Seafire Resort + Spa by IHG",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/15000000/14770000/14761400/14761342/4afac615.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "970",
+      "link": "https://www.hotels.com/ho473362944/kimpton-seafire-resort-and-spa-an-ihg-hotel-seven-mile-beach-cayman-islands/",
+      "external": true
+    },
+    {
+      "price": "€2,134",
+      "rating": "9.0",
+      "name": "Strawberry Hill ",
+      "location": "Irish Town",
+      "image": "https://images.trvl-media.com/lodging/1000000/40000/34800/34793/935f0768.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "143",
+      "link": "https://www.hotels.com/ho216108/strawberry-hill-irish-town-jamaica/",
+      "external": true
+    },
+    {
+      "price": "€2,788",
+      "rating": "9.2",
+      "name": "Villa Madame",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/90000/83200/83106/12623a8c.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "580",
+      "link": "https://www.hotels.com/ho282982/villa-madame-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,062",
+      "rating": "9.8",
+      "name": "Hotel Hotel - Member of Design Hotels",
+      "location": "Príncipe Real",
+      "image": "https://images.trvl-media.com/lodging/2000000/1600000/1590500/1590488/852bf0b9.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "307",
+      "link": "https://www.hotels.com/ho287621/hotel-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,936",
+      "rating": "9.2",
+      "name": "Le Citizen Hôtel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/5000000/4120000/4113300/4113296/07032a3f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "240",
+      "link": "https://www.hotels.com/ho367688/le-citizen-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,866",
+      "rating": "9.4",
+      "name": "Les Jardins de Mademoiselle Hotel & Spa",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/25000000/24300000/24295400/24295324/33385632.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "407",
+      "link": "https://www.hotels.com/ho778450368/les-jardins-de-mademoiselle-hotel-spa-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,323",
+      "rating": "9.6",
+      "name": "Hammock Suites",
+      "location": "Castries",
+      "image": "https://images.trvl-media.com/lodging/97000000/96330000/96323900/96323882/769c2311.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "10",
+      "link": "https://www.hotels.com/ho3083364224/hammock-suites-castries-st-lucia/",
+      "external": true
+    },
+    {
+      "price": "€505",
+      "rating": "9.2",
+      "name": "Anton Reef",
+      "location": "9 min walk to La Playita",
+      "image": "https://images.trvl-media.com/lodging/21000000/20360000/20358200/20358192/d28bf06e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "267",
+      "link": "https://www.hotels.com/ho652462144/anton-reef-sosua-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€213",
+      "rating": "9.4",
+      "name": "Villas Vallejuelo",
+      "location": "Vallejuelo",
+      "image": "https://images.trvl-media.com/lodging/110000000/109690000/109687600/109687544/ed4cdca7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "3",
+      "link": "https://www.hotels.com/ho3511001408/villas-vallejuelo/",
+      "external": true
+    },
+    {
+      "price": "€724",
+      "rating": "9.2",
+      "name": "Luca Hotel by Heritage Residences Signature Collection",
+      "location": "6 min walk to Playa Montesinos",
+      "image": "https://images.trvl-media.com/lodging/15000000/15000000/14991000/14990976/a7f4e292.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "703",
+      "link": "https://www.hotels.com/ho583183/luca-hotel-by-the-oxo-house-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,642",
+      "rating": "9.0",
+      "name": "Hôtel Crayon Rouge",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/9000000/8370000/8364100/8364073/6ff42710.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "717",
+      "link": "https://www.hotels.com/ho461508/hotel-crayon-rouge-by-elegancia-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€715",
+      "rating": "9.2",
+      "name": "Lawrence's Hotel",
+      "location": "Santa Maria e São Miguel, São Martinho e São Pedro de Penaferrim, 14.88 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/2000000/1110000/1103500/1103408/c4a228e1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "482",
+      "link": "https://www.hotels.com/ho296558/lawrence-s-hotel-sintra-portugal/",
+      "external": true
+    },
+    {
+      "price": "€5,528",
+      "rating": "10",
+      "name": "Ocean Z Boutique Hotel",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/16000000/15920000/15918500/15918408/0aaa0539.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "181",
+      "link": "https://www.hotels.com/ho621825/ocean-z-boutique-hotel-noord-aruba/",
+      "external": true
+    },
+    {
+      "price": "€798",
+      "rating": "9.6",
+      "name": "Dear Lisbon - Gallery House",
+      "location": "Misericórdia",
+      "image": "https://images.trvl-media.com/lodging/21000000/20180000/20174700/20174674/e95bda53.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho646589568/dear-lisbon-gallery-house-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€3,452",
+      "rating": "9.6",
+      "name": "Bairro Alto Hotel",
+      "location": "Chiado",
+      "image": "https://images.trvl-media.com/lodging/2000000/1320000/1314000/1313947/32325e14.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "647",
+      "link": "https://www.hotels.com/ho237513/bairro-alto-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€363",
+      "rating": "9.4",
+      "name": "Chalet D Ávila Guest House",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/39000000/38840000/38835900/38835855/0881597d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "586",
+      "link": "https://www.hotels.com/ho1243747360/chalet-d-avila-guest-house-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€791",
+      "rating": "9.6",
+      "name": "Lumen Hotel & The Lisbon Light Show",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/67000000/66890000/66889100/66889014/3ed62c4d.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "760",
+      "link": "https://www.hotels.com/ho2141448448/lumen-hotel-the-lisbon-light-show-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€8,850",
+      "rating": "9.4",
+      "name": "JOIA Aruba by Iberostar",
+      "location": "4 min walk to Manchebo Beach",
+      "image": "https://images.trvl-media.com/lodging/104000000/103860000/103858700/103858680/c4fd2063.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "196",
+      "link": "https://www.hotels.com/ho3324477760/joia-aruba-by-iberostar-oranjestad-aruba/",
+      "external": true
+    },
+    {
+      "price": "€962",
+      "rating": "9.6",
+      "name": "As Janelas Verdes Inn, a Lisbon Heritage Collection",
+      "location": "Estrela",
+      "image": "https://images.trvl-media.com/lodging/1000000/20000/12800/12788/ad72e016.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "833",
+      "link": "https://www.hotels.com/ho174514/as-janelas-verdes-inn-a-lisbon-heritage-collection-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€900",
+      "rating": "9.2",
+      "name": "Hotel Star Inn Lisbon Aeroporto",
+      "location": "Olivais",
+      "image": "https://images.trvl-media.com/lodging/18000000/17060000/17059000/17058959/53145e08.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "3317",
+      "link": "https://www.hotels.com/ho651069/hotel-star-inn-lisbon-aeroporto-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,821",
+      "rating": "9.0",
+      "name": "Pullman Paris Montparnasse Hotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/20000/17400/17333/a9cc7b03.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "766",
+      "link": "https://www.hotels.com/ho114754/pullman-paris-montparnasse-hotel-opening-soon-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,368",
+      "rating": "10",
+      "name": "Royal Beach Hotel Punta Cana A Jdv By Hyatt Hotel",
+      "location": "1 min walk to Los Corales Beach",
+      "image": "https://images.trvl-media.com/lodging/116000000/115550000/115541800/115541746/92460f99.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "4",
+      "link": "https://www.hotels.com/ho3698335872/royal-beach-hotel-punta-cana-a-jdv-by-hyatt-hotel/",
+      "external": true
+    },
+    {
+      "price": "€4,765",
+      "rating": "9.4",
+      "name": "Villa Marquis a Member of Melia Collection Tour Eiffel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/50000/44800/44711/3679dda4.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "89",
+      "link": "https://www.hotels.com/ho128309/melia-paris-villa-marquis-a-melia-collection-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€4,037",
+      "rating": "9.6",
+      "name": "Maison Colbert, member of Meliá Collection  Notre-Dame",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/570000/562500/562453/d1ad47ba.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "147",
+      "link": "https://www.hotels.com/ho130003/melia-paris-notre-dame-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,014",
+      "rating": "9.0",
+      "name": "HF Fénix Lisboa",
+      "location": "Rato",
+      "image": "https://images.trvl-media.com/lodging/1000000/50000/46600/46579/e98b4189.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho285063/hf-fenix-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€927",
+      "rating": "9.0",
+      "name": "Fabulous Village & Resort",
+      "location": "San Francisco de Macorís",
+      "image": "https://images.trvl-media.com/lodging/91000000/90320000/90312800/90312800/886ed1ef.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "23",
+      "link": "https://www.hotels.com/ho2891009600/fabulous-village-resort-dixcove-ghana/",
+      "external": true
+    },
+    {
+      "price": "€924",
+      "rating": "9.6",
+      "name": "Hotel Santa Justa Lisboa",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/7000000/6220000/6219300/6219203/3fa73dc4.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1130",
+      "link": "https://www.hotels.com/ho434489/hotel-santa-justa-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€692",
+      "rating": "9.4",
+      "name": "Urbano FLH Hotels Lisboa",
+      "location": "Alfama",
+      "image": "https://images.trvl-media.com/lodging/42000000/41920000/41912400/41912331/f4857ee0.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "887",
+      "link": "https://www.hotels.com/ho1342194592/urbano-flh-hotels-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,087",
+      "rating": "9.6",
+      "name": "B Montmartre",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/2000000/1410000/1405300/1405292/029e9d22.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho238018/b-montmartre-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,692",
+      "rating": "9.2",
+      "name": "Hotel Residence Playa Colibri",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/4000000/3380000/3373400/3373351/272c74aa.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "241",
+      "link": "https://www.hotels.com/ho342667/hotel-residence-playa-colibri-las-terrenas-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€2,639",
+      "rating": "9.0",
+      "name": "Saint Francis Resort",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/39000000/38920000/38916400/38916395/fc3317a3.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "138",
+      "link": "https://www.hotels.com/ho1246324640/saint-francis-resort-stocking-island-bahamas/",
+      "external": true
+    },
+    {
+      "price": "€1,206",
+      "rating": "9.0",
+      "name": "Hôtel Palm - Astotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/570000/565700/565627/efdb5e02.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "309",
+      "link": "https://www.hotels.com/ho282444/hotel-palm-astotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,242",
+      "rating": "9.4",
+      "name": "PortoBay Liberdade",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/8000000/7230000/7229000/7228911/f0a7778e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1004",
+      "link": "https://www.hotels.com/ho462837/portobay-liberdade-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,231",
+      "rating": "9.2",
+      "name": "Dom Pedro Lisboa Hotel, a member of Radisson Individuals",
+      "location": "Rato",
+      "image": "https://images.trvl-media.com/lodging/1000000/210000/201100/201001/38dfc361.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "24",
+      "link": "https://www.hotels.com/ho199100/dom-pedro-lisboa-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€4,644",
+      "rating": "9.2",
+      "name": "Kimpton St Honore Paris by IHG",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/63000000/62990000/62984900/62984874/1061a7fb.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "312",
+      "link": "https://www.hotels.com/ho2016515968/kimpton-st-honore-paris-an-ihg-hotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,354",
+      "rating": "9.8",
+      "name": "Hôtel Eldorado Paris",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/11000000/10220000/10218100/10218003/7fdbaa60.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "99",
+      "link": "https://www.hotels.com/ho499289/hotel-eldorado-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,153",
+      "rating": "9.0",
+      "name": "citizenM Paris Gare de Lyon",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/18000000/17720000/17710500/17710418/0c6cf168.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1309",
+      "link": "https://www.hotels.com/ho675022/citizenm-paris-gare-de-lyon-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,482",
+      "rating": "9.2",
+      "name": "Hotel Saint Dominique",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/5600/5583/fd7a2dbc.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho283013/hotel-saint-dominique-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,306",
+      "rating": "9.8",
+      "name": "ARTSY Cascais",
+      "location": "Cascais e Estoril, 15.26 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/92000000/91430000/91429700/91429608/d9754030.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "98",
+      "link": "https://www.hotels.com/ho2926747456/artsy-cascais-cascais-portugal/",
+      "external": true
+    },
+    {
+      "price": "€2,314",
+      "rating": "9.2",
+      "name": "Albachiara Hotel",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/5000000/4560000/4557900/4557827/72d73ace.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "400",
+      "link": "https://www.hotels.com/ho388411/albachiara-hotel-las-terrenas-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€3,412",
+      "rating": "9.0",
+      "name": "Hôtel Edouard 7 Paris Opéra",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/3400/3389/2a3272c1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho125391/hotel-edouard-7-paris-opera-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,180",
+      "rating": "9.4",
+      "name": "Hotel do Chiado",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/1000000/910000/905400/905325/f8a32969.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "931",
+      "link": "https://www.hotels.com/ho206817/hotel-do-chiado-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,346",
+      "rating": "9.0",
+      "name": "Hôtel George - Astotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/880000/870400/870400/cbaf5853.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "760",
+      "link": "https://www.hotels.com/ho236219/hotel-george-astotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,033",
+      "rating": "9.6",
+      "name": "You and the sea",
+      "location": "Ericeira, 22.29 mi from Lisbon",
+      "image": "https://images.trvl-media.com/lodging/25000000/24210000/24205500/24205408/a171f8fa.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "168",
+      "link": "https://www.hotels.com/ho775573056/you-and-the-sea-mafra-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,266",
+      "rating": "9.0",
+      "name": "OKKO Hotels Paris Porte de Versailles",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/19000000/18030000/18023700/18023637/41e3d4ab.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1001",
+      "link": "https://www.hotels.com/ho577756384/okko-hotels-paris-porte-de-versailles-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€855",
+      "rating": "9.0",
+      "name": "Timhotel Nation",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/190000/185200/185154/a985731f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "24",
+      "link": "https://www.hotels.com/ho191637/timhotel-nation-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,317",
+      "rating": "9.4",
+      "name": "Hôtel Baume",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/60000/53600/53512/00c40acf.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "711",
+      "link": "https://www.hotels.com/ho282365/hotel-baume-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,967",
+      "rating": "9.0",
+      "name": "Hotel & Spa La Belle Juliette",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/990000/981100/981059/df0f0fa2.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "413",
+      "link": "https://www.hotels.com/ho282362/hotel-spa-la-belle-juliette-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,965",
+      "rating": "9.2",
+      "name": "Hotel Brighton",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/60000/55000/54958/w1017h683x0y0-f5dc7c6f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho107349/hotel-brighton-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€726",
+      "rating": "10",
+      "name": "Gaia Residence",
+      "location": "13 min walk to Long Beach",
+      "image": "https://images.trvl-media.com/lodging/43000000/42250000/42247700/42247695/cd3e620f.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "43",
+      "link": "https://www.hotels.com/ho1352926240/gaia-residence-puerto-plata-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€16,601",
+      "rating": "10",
+      "name": "The Rock House Hotel",
+      "location": "7 min walk to Pink Sand Beach",
+      "image": "https://images.trvl-media.com/lodging/100000000/99450000/99446800/99446731/a36d1376.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "15",
+      "link": "https://www.hotels.com/ho3183295392/the-rock-house-hotel-dunmore-town-bahamas/",
+      "external": true
+    },
+    {
+      "price": "€1,896",
+      "rating": "9.4",
+      "name": "Hôtel Bleu de Grenelle - Tour Eiffel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/570000/562100/562008/552e9e5a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "398",
+      "link": "https://www.hotels.com/ho303744/hotel-bleu-de-grenelle-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€790",
+      "rating": "9.4",
+      "name": "Esqina Cosmopolitan Lodge",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/36000000/35090000/35082000/35081980/2829197e.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1047",
+      "link": "https://www.hotels.com/ho1123623360/esqina-cosmopolitan-lodge-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,003",
+      "rating": "9.0",
+      "name": "Kariwak Village Holistic Haven",
+      "location": "5 min walk to Store Bay",
+      "image": "https://images.trvl-media.com/lodging/104000000/103850000/103842900/103842811/a340b5bb.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "36",
+      "link": "https://www.hotels.com/ho3323969952/",
+      "external": true
+    },
+    {
+      "price": "€784",
+      "rating": "9.4",
+      "name": "Westlight Lisboa Madalena",
+      "location": "Alfama",
+      "image": "https://images.trvl-media.com/lodging/103000000/102640000/102632500/102632403/6222e0a7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "139",
+      "link": "https://www.hotels.com/ho3285236896/westlight-lisboa-madalena-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,954",
+      "rating": "9.4",
+      "name": "Weatherills Hotel",
+      "location": "St. John's",
+      "image": "https://images.trvl-media.com/lodging/89000000/88740000/88731400/88731348/8b310663.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "67",
+      "link": "https://www.hotels.com/ho2840403136/weatherills-hotel-all-saints-antigua-and-barbuda/",
+      "external": true
+    },
+    {
+      "price": "€2,229",
+      "rating": "9.2",
+      "name": "Hôtel des Académies et des Arts",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/2000000/1640000/1632400/1632383/de418273.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "313",
+      "link": "https://www.hotels.com/ho252924/hotel-des-academies-et-des-arts-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€2,648",
+      "rating": "10",
+      "name": "HADCO Experiences at AWNC",
+      "location": "Lopinot",
+      "image": "https://images.trvl-media.com/lodging/104000000/103060000/103051500/103051453/4b68a9f3.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "3",
+      "link": "https://www.hotels.com/ho3298646496/hadco-experiences-at-awnc-lopinot-trinidad-and-tobago/",
+      "external": true
+    },
+    {
+      "price": "€1,719",
+      "rating": "10",
+      "name": "The Verse",
+      "location": "Misericórdia",
+      "image": "https://images.trvl-media.com/lodging/105000000/104280000/104272600/104272597/a0a270c7.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "13",
+      "link": "https://www.hotels.com/ho3337723104/the-verse-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€3,162",
+      "rating": "9.0",
+      "name": "Hôtel Mansart",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/9000000/8090000/8089900/8089880/0b0a6d9a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "548",
+      "link": "https://www.hotels.com/ho186204/hotel-mansart-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,694",
+      "rating": "9.6",
+      "name": "Hôtel des Grands Voyageurs",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/2200/2105/2c189746.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "251",
+      "link": "https://www.hotels.com/ho114412/hotel-des-grands-voyageurs-dixcove-ghana/",
+      "external": true
+    },
+    {
+      "price": "€4,733",
+      "rating": "9.4",
+      "name": "Hôtel Elysia by Inwood Hotels",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/790000/788800/788721/d5c41a8a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "344",
+      "link": "https://www.hotels.com/ho291846/hotel-elysia-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,305",
+      "rating": "9.0",
+      "name": "Hôtel Monterosa - Astotel",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/2000000/1440000/1431300/1431221/f08d1e10.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "360",
+      "link": "https://www.hotels.com/ho282472/hotel-monterosa-astotel-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€3,107",
+      "rating": "9.2",
+      "name": "Hotel Le A",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/920000/919500/919451/9da5c741.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "380",
+      "link": "https://www.hotels.com/ho282412/hotel-le-a-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,634",
+      "rating": "9.2",
+      "name": "Hotel Parisianer",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/35000000/34790000/34787700/34787606/235b04f3.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "333",
+      "link": "https://www.hotels.com/ho1114203392/hotel-parisianer-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,191",
+      "rating": "9.4",
+      "name": "Hotel Vincci Liberdade",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/13000000/12480000/12477200/12477188/8712258a.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1000",
+      "link": "https://www.hotels.com/ho553745/vincci-liberdade-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,364",
+      "rating": "9.2",
+      "name": "Blue Star Apartments and Hotel",
+      "location": "St. George's",
+      "image": "https://images.trvl-media.com/lodging/59000000/58950000/58945900/58945868/67461213.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "31",
+      "link": "https://www.hotels.com/ho1887267776/blue-star-apartments-and-hotel-st-george-s-grenada/",
+      "external": true
+    },
+    {
+      "price": "€2,577",
+      "rating": "9.8",
+      "name": "Hôtel Saint-Louis - Jardin du Luxembourg",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/1000000/90000/83100/83097/fe57fe44.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "10",
+      "link": "https://www.hotels.com/ho430081/hotel-perreyve-paris-france/",
+      "external": true
+    },
+    {
+      "price": "€1,064",
+      "rating": "9.8",
+      "name": "Lisbon Wine Hotel",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/23000000/22250000/22243100/22243050/0fc85f73.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "990",
+      "link": "https://www.hotels.com/ho712777600/lisbon-wine-hotel-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€756",
+      "rating": "9.6",
+      "name": "Luster Hotel",
+      "location": "Lisbon City Center",
+      "image": "https://images.trvl-media.com/lodging/90000000/89390000/89383000/89382949/ff5661e1.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "319",
+      "link": "https://www.hotels.com/ho2861254368/luster-hotel-dixcove-ghana/",
+      "external": true
+    },
+    {
+      "price": "€579",
+      "rating": "8.8",
+      "name": "Gran Hotel Europa Santo Domingo, Trademark by Wyndham",
+      "location": "14 min walk to Playa Montesinos",
+      "image": "https://images.trvl-media.com/lodging/30000000/29310000/29301200/29301156/b54c6b80.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "907",
+      "link": "https://www.hotels.com/ho938636992/gran-hotel-europa-santo-domingo-trademark-by-wyndham-santo-domingo-dominican-republic/",
+      "external": true
+    },
+    {
+      "price": "€4,328",
+      "rating": "9.2",
+      "name": "Maison Boissière Barnes Residences",
+      "location": "Paris",
+      "image": "https://images.trvl-media.com/lodging/107000000/106610000/106605400/106605303/40eae444.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "25",
+      "link": "https://www.hotels.com/ho3412369696/",
+      "external": true
+    },
+    {
+      "price": "€1,070",
+      "rating": "9.4",
+      "name": "Holiday Inn Mayaguez and Tropical Casino by IHG",
+      "location": "Mayagüez",
+      "image": "https://images.trvl-media.com/lodging/1000000/10000/1600/1584/05b477cb.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "1162",
+      "link": "https://www.hotels.com/ho169992/holiday-inn-mayaguez-and-tropical-casino-an-ihg-hotel-mayaguez-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€2,151",
+      "rating": "9.4",
+      "name": "Fairfield by Marriott Luquillo Beach",
+      "location": "7 min walk to Luquillo Beach",
+      "image": "https://images.trvl-media.com/lodging/99000000/98480000/98473400/98473320/096e01ca.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "813",
+      "link": "https://www.hotels.com/ho3152146240/fairfield-by-marriott-luquillo-beach-luquillo-puerto-rico/",
+      "external": true
+    },
+    {
+      "price": "€1,497",
+      "rating": "9.2",
+      "name": "My Story Hotel Figueira",
+      "location": "Baixa",
+      "image": "https://images.trvl-media.com/lodging/39000000/38530000/38521800/38521734/07b72f42.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "302",
+      "link": "https://www.hotels.com/ho1233695488/my-story-hotel-figueira-lisbon-portugal/",
+      "external": true
+    },
+    {
+      "price": "€1,027",
+      "rating": "9.0",
+      "name": "Velero Beach Resort",
+      "location": "On the beach",
+      "image": "https://images.trvl-media.com/lodging/1000000/900000/898200/898116/7c49a103.jpg?impolicy=resizecrop&ra=fit&rw=455&rh=455",
+      "reviews": "536",
+      "link": "https://www.hotels.com/ho347138/velero-beach-resort-cabarete-dominican-republic/",
+      "external": true
+    }
+  ]
+}
