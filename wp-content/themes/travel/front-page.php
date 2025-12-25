@@ -118,25 +118,9 @@ $deals_category_id = $deals_category ? $deals_category->term_id : 0;
             <div class="search-card">
                 <div class="search-card-head">
                     <h2><?php esc_html_e('Start your search', 'travel'); ?></h2>
-                    <p><?php esc_html_e('Search destinations, hotels, or experiences.', 'travel'); ?></p>
+                    <p><?php esc_html_e('Filter by dates, ratings, and amenities to find the right stay.', 'travel'); ?></p>
                 </div>
                 <?php get_search_form(); ?>
-                <div class="search-suggestions">
-                    <button class="chip" type="button" data-search-chip="beach escapes"><?php esc_html_e('Beach escapes', 'travel'); ?></button>
-                    <button class="chip" type="button" data-search-chip="mountain cabins"><?php esc_html_e('Mountain cabins', 'travel'); ?></button>
-                    <button class="chip" type="button" data-search-chip="boutique hotels"><?php esc_html_e('Boutique hotels', 'travel'); ?></button>
-                    <button class="chip" type="button" data-search-chip="foodie weekends"><?php esc_html_e('Foodie weekends', 'travel'); ?></button>
-                </div>
-                <div class="search-meta">
-                    <div>
-                        <span class="meta-label"><?php esc_html_e('Top picks this week', 'travel'); ?></span>
-                        <strong>Tokyo, Amalfi, Cartagena</strong>
-                    </div>
-                    <div>
-                        <span class="meta-label"><?php esc_html_e('Flexible dates', 'travel'); ?></span>
-                        <strong><?php esc_html_e('Best prices in Sept', 'travel'); ?></strong>
-                    </div>
-                </div>
             </div>
             <div class="mini-grid">
                 <div class="mini-card">

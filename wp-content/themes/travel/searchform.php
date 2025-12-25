@@ -68,6 +68,7 @@ $accessibility_selected = $parse_list('accessibility');
 $meal_plan_value = isset($_GET['meal_plan']) ? sanitize_text_field(wp_unslash($_GET['meal_plan'])) : 'FREE_BREAKFAST';
 $available_only = isset($_GET['available_filter']) ? sanitize_text_field(wp_unslash($_GET['available_filter'])) === 'SHOW_AVAILABLE_ONLY' : true;
 $debug_checked = isset($_GET['debug']) && $_GET['debug'];
+$filters_open = function_exists('is_front_page') && is_front_page();
 ?>
 <form role="search" method="get" class="travel-search" action="<?php echo esc_url(home_url('/')); ?>">
     <label class="screen-reader-text" for="<?php echo $search_id; ?>"><?php esc_html_e('Search for:', 'travel'); ?></label>
@@ -91,7 +92,7 @@ $debug_checked = isset($_GET['debug']) && $_GET['debug'];
     </div>
     <p class="search-hint"><?php esc_html_e('Try: Lisbon, beach, boutique hotel', 'travel'); ?></p>
 
-    <details class="search-filters">
+    <details class="search-filters"<?php echo $filters_open ? ' open' : ''; ?>>
         <summary><?php esc_html_e('More filters', 'travel'); ?></summary>
         <div class="filter-grid">
             <div class="filter-group">
