@@ -1,50 +1,50 @@
 <?php
 get_header();
 
-$destinations = [
+$destination_fallback = [
     [
         'name' => 'Lisbon',
         'tag' => 'City and coast',
         'desc' => 'Pastel streets, atlantic breezes, and late dinners by the river.',
         'price' => 'From $130/night',
-        'class' => 'sunset',
     ],
     [
         'name' => 'Kyoto',
         'tag' => 'Temples and tea',
         'desc' => 'Quiet alleys, lantern light, and garden views.',
         'price' => 'From $155/night',
-        'class' => 'moss',
     ],
     [
         'name' => 'Cape Town',
         'tag' => 'Ocean meets mountain',
         'desc' => 'Cape views, craft markets, and sunrise hikes.',
         'price' => 'From $120/night',
-        'class' => 'coast',
     ],
     [
         'name' => 'Reykjavik',
         'tag' => 'Northern lights',
         'desc' => 'Geothermal pools and winter adventures.',
         'price' => 'From $180/night',
-        'class' => 'glacier',
     ],
     [
         'name' => 'Buenos Aires',
         'tag' => 'Food and tango',
         'desc' => 'Bold flavors, live music, and wide boulevards.',
         'price' => 'From $110/night',
-        'class' => 'terra',
     ],
     [
         'name' => 'Vancouver',
         'tag' => 'City and nature',
         'desc' => 'Rainforest walks and waterfront cafes.',
         'price' => 'From $165/night',
-        'class' => 'pine',
     ],
 ];
+
+$destination_classes = ['sunset', 'moss', 'coast', 'glacier', 'terra', 'pine'];
+$destinations = function_exists('travel_get_cached_destination_cards') ? travel_get_cached_destination_cards(6) : [];
+if (!$destinations) {
+    $destinations = $destination_fallback;
+}
 
 $deal_placeholders = [
     [
@@ -87,6 +87,7 @@ $steps = [
 
 $deals_category = get_category_by_slug('hotel-deals');
 $deals_category_id = $deals_category ? $deals_category->term_id : 0;
+$deal_cards = function_exists('travel_get_cached_deal_cards') ? travel_get_cached_deal_cards(3) : [];
 $cached_hotels = function_exists('travel_get_cached_hotel_results') ? travel_get_cached_hotel_results(20) : [];
 ?>
 
@@ -219,7 +220,11 @@ $cached_hotels = function_exists('travel_get_cached_hotel_results') ? travel_get
         </div>
         <div class="destination-grid">
             <?php foreach ($destinations as $index => $destination) : ?>
-                <article class="destination-card destination-card--<?php echo esc_attr($destination['class']); ?> reveal" style="--delay: <?php echo esc_attr(sprintf('%.2fs', 0.05 * ($index + 1))); ?>;">
+                <?php
+                $card_class = $destination_classes[$index % count($destination_classes)];
+                $search_term = $destination['search'] ?? $destination['name'];
+                ?>
+                <article class="destination-card destination-card--<?php echo esc_attr($card_class); ?> reveal" style="--delay: <?php echo esc_attr(sprintf('%.2fs', 0.05 * ($index + 1))); ?>;">
                     <div class="card-media" aria-hidden="true"></div>
                     <div class="card-body">
                         <div class="card-top">
@@ -228,7 +233,7 @@ $cached_hotels = function_exists('travel_get_cached_hotel_results') ? travel_get
                         </div>
                         <h3><?php echo esc_html($destination['name']); ?></h3>
                         <p><?php echo esc_html($destination['desc']); ?></p>
-                        <a class="text-link" href="<?php echo esc_url(add_query_arg('s', $destination['name'], home_url('/'))); ?>">
+                        <a class="text-link" href="<?php echo esc_url(add_query_arg('s', $search_term, home_url('/'))); ?>">
                             <?php esc_html_e('Search stays', 'travel'); ?>
                         </a>
                     </div>
@@ -253,7 +258,45 @@ $cached_hotels = function_exists('travel_get_cached_hotel_results') ? travel_get
                 'category_name' => 'hotel-deals',
             ]);
 
-            if ($deal_query->have_posts()) :
+            if (!empty($deal_cards)) :
+                foreach ($deal_cards as $index => $deal) :
+                    $deal_link = $deal['link'];
+                    $deal_external = !empty($deal['external']);
+                    $deal_link_attrs = $deal_external ? ' target="_blank" rel="noopener noreferrer"' : '';
+                    ?>
+                    <article class="deal-card reveal" style="--delay: <?php echo esc_attr(sprintf('%.2fs', 0.05 * ($index + 1))); ?>;">
+                        <div class="deal-media">
+                            <?php if (!empty($deal['image'])) : ?>
+                                <img src="<?php echo esc_url($deal['image']); ?>" alt="<?php echo esc_attr($deal['name']); ?>" loading="lazy">
+                            <?php else : ?>
+                                <div class="deal-media-fallback" aria-hidden="true"></div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="deal-body">
+                            <span class="tag"><?php esc_html_e('Hotel deal', 'travel'); ?></span>
+                            <h3>
+                                <?php if ($deal_link) : ?>
+                                    <a href="<?php echo esc_url($deal_link); ?>"<?php echo $deal_link_attrs; ?>><?php echo esc_html($deal['name']); ?></a>
+                                <?php else : ?>
+                                    <?php echo esc_html($deal['name']); ?>
+                                <?php endif; ?>
+                            </h3>
+                            <?php if (!empty($deal['location'])) : ?>
+                                <p class="deal-location"><?php echo esc_html($deal['location']); ?></p>
+                            <?php endif; ?>
+                            <div class="deal-meta">
+                                <span class="price"><?php echo esc_html($deal['price']); ?></span>
+                                <?php if ($deal_link) : ?>
+                                    <a class="text-link" href="<?php echo esc_url($deal_link); ?>"<?php echo $deal_link_attrs; ?>>
+                                        <?php esc_html_e('View deal', 'travel'); ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php elseif ($deal_query->have_posts()) : ?>
+                <?php
                 $deal_index = 0;
                 while ($deal_query->have_posts()) :
                     $deal_query->the_post();

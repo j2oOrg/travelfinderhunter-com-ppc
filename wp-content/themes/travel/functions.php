@@ -352,6 +352,123 @@ function travel_get_cached_hotel_results($limit = 20) {
     return array_slice($items, 0, $limit);
 }
 
+function travel_parse_rating($value) {
+    if ($value === '' || $value === null) {
+        return 0.0;
+    }
+    if (!is_numeric($value)) {
+        return 0.0;
+    }
+    return (float) $value;
+}
+
+function travel_format_price_label($price) {
+    $price = trim((string) $price);
+    if ($price === '') {
+        return __('Check rates', 'travel');
+    }
+    if (stripos($price, 'from') === 0) {
+        return $price;
+    }
+
+    return sprintf(__('From %s', 'travel'), $price);
+}
+
+function travel_build_destination_tag($rating) {
+    if ($rating >= 9) {
+        return __('Top rated', 'travel');
+    }
+    if ($rating >= 8.5) {
+        return __('Traveler favorite', 'travel');
+    }
+
+    return __('Popular stay', 'travel');
+}
+
+function travel_get_cached_destination_cards($limit = 6) {
+    $cache = travel_read_cache();
+    $items = isset($cache['items']) && is_array($cache['items']) ? $cache['items'] : [];
+    if (!$items) {
+        return [];
+    }
+
+    $destinations = [];
+    $seen = [];
+
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            continue;
+        }
+
+        $location = isset($item['location']) ? trim((string) $item['location']) : '';
+        $hotel_name = isset($item['name']) ? trim((string) $item['name']) : '';
+        $label = $location !== '' ? $location : $hotel_name;
+
+        if ($label === '') {
+            continue;
+        }
+
+        $key = strtolower($label);
+        if (isset($seen[$key])) {
+            continue;
+        }
+        $seen[$key] = true;
+
+        $rating = travel_parse_rating($item['rating'] ?? '');
+        $destinations[] = [
+            'name' => $label,
+            'tag' => travel_build_destination_tag($rating),
+            'desc' => $hotel_name !== '' ? sprintf(__('Featured stay: %s', 'travel'), $hotel_name) : __('Handpicked stays and local favorites.', 'travel'),
+            'price' => travel_format_price_label($item['price'] ?? ''),
+            'search' => $label,
+        ];
+
+        if (count($destinations) >= $limit) {
+            break;
+        }
+    }
+
+    return $destinations;
+}
+
+function travel_get_cached_deal_cards($limit = 3) {
+    $cache = travel_read_cache();
+    $items = isset($cache['items']) && is_array($cache['items']) ? $cache['items'] : [];
+    if (!$items) {
+        return [];
+    }
+
+    $items = array_values(array_filter($items, function ($item) {
+        return is_array($item) && !empty($item['name']);
+    }));
+
+    usort($items, function ($a, $b) {
+        $rating_a = travel_parse_rating($a['rating'] ?? '');
+        $rating_b = travel_parse_rating($b['rating'] ?? '');
+        if ($rating_a === $rating_b) {
+            return 0;
+        }
+        return ($rating_a > $rating_b) ? -1 : 1;
+    });
+
+    $slice = array_slice($items, 0, min(count($items), $limit * 6));
+    shuffle($slice);
+
+    $deals = [];
+    foreach (array_slice($slice, 0, $limit) as $item) {
+        $deals[] = [
+            'name' => (string) ($item['name'] ?? ''),
+            'location' => (string) ($item['location'] ?? ''),
+            'price' => travel_format_price_label($item['price'] ?? ''),
+            'image' => (string) ($item['image'] ?? ''),
+            'link' => (string) ($item['link'] ?? ''),
+            'external' => !empty($item['external']),
+        ];
+    }
+
+    return $deals;
+}
+
 function travel_parse_date($value) {
     if (!$value || !is_string($value)) {
         return '';
