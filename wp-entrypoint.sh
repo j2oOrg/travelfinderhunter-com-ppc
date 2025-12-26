@@ -63,6 +63,11 @@ fi
 
 chown -R www-data:www-data /var/www/html
 
+# Ensure WordPress update directory exists and is writable.
+mkdir -p /var/www/html/wp-content/upgrade
+chown -R www-data:www-data /var/www/html/wp-content/upgrade || true
+chmod -R 775 /var/www/html/wp-content/upgrade || true
+
 # Auto-generate wp-config.php if missing.
 if [ ! -f "/var/www/html/wp-config.php" ]; then
     echo "Generating wp-config.php..."
@@ -142,6 +147,7 @@ ensure_page_with_content() {
       wp --path=/var/www/html --allow-root post update "$id" --post_content="$content" || true
     fi
   fi
+  wp --path=/var/www/html --allow-root post update "$id" --post_status=publish || true
   if [ -n "$template" ]; then
     wp --path=/var/www/html --allow-root post meta update "$id" _wp_page_template "$template" || true
   fi
@@ -178,9 +184,6 @@ ensure_post() {
       --porcelain
   fi
 }
-
-ensure_page "rules" "Rules" "page-rules.php"
-ensure_page "faq" "FAQ" "page-faq.php"
 
 privacy_policy_content=$(cat <<'EOF'
 <p>Effective date: 2025-01-01</p>
@@ -238,6 +241,9 @@ EOF
 
 ensure_page_with_content "privacy-policy" "Privacy Policy" "" "$privacy_policy_content"
 ensure_page_with_content "terms-and-conditions" "Terms and Conditions" "" "$terms_content"
+
+ensure_page "rules" "Rules" "page-rules.php"
+ensure_page "faq" "FAQ" "page-faq.php"
 
 guide_category_id=$(ensure_category "travel-guides" "Travel Guides")
 

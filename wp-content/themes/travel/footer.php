@@ -27,8 +27,8 @@
             <div class="footer-links">
                 <h2><?php esc_html_e('Support', 'travel'); ?></h2>
                 <ul class="footer-menu">
-                    <li><a href="<?php echo esc_url(home_url('/terms-and-conditions')); ?>"><?php esc_html_e('Terms and Conditions', 'travel'); ?></a></li>
-                    <li><a href="<?php echo esc_url(home_url('/privacy-policy')); ?>"><?php esc_html_e('Privacy Policy', 'travel'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/?page_id=6')); ?>"><?php esc_html_e('Terms and Conditions', 'travel'); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/?page_id=3')); ?>"><?php esc_html_e('Privacy Policy', 'travel'); ?></a></li>
                 </ul>
             </div>
             <div class="footer-links">
