@@ -1,4 +1,4 @@
-FROM wordpress:php8.2-apache
+FROM wordpress:php8.3-apache
 
 # Install MariaDB server alongside WordPress/PHP/Apache plus curl for wp-cli download.
 RUN apt-get update \
