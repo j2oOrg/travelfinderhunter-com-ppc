@@ -3,6 +3,13 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php
+    $site_description = get_bloginfo('description');
+    if (!$site_description) {
+        $site_description = __('Find great travel destinations to book with curated hotel deals and smart search tools.', 'travel');
+    }
+    ?>
+    <meta name="description" content="<?php echo esc_attr($site_description); ?>">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

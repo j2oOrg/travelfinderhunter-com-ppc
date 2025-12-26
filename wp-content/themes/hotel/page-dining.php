@@ -15,7 +15,7 @@ get_header();
         <p class="lead">From relaxed lunches to late-night cocktails, Casino Helsinki Hotel keeps you fueled between games. English menus and staff guidance available at every counter.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#venues">Explore venues</a>
-          <a class="btn ghost" href="mailto:events@travelfinderhunter.com">Book for groups</a>
+          <a class="btn ghost" href="mailto:support@travelfinderhunter.com">Book for groups</a>
         </div>
         <div class="hero-meta">
           <span class="pill"><i class="fa-solid fa-clock"></i> Sports Bar: opens 12:00</span>
@@ -78,7 +78,7 @@ get_header();
           <li>English menus with allergen highlights available on request.</li>
         </ul>
         <div class="hero-actions">
-          <a class="btn primary" href="mailto:events@travelfinderhunter.com">Reserve a table</a>
+          <a class="btn primary" href="mailto:support@travelfinderhunter.com">Reserve a table</a>
           <a class="btn ghost" href="#visit">Find us</a>
         </div>
       </div>
@@ -138,7 +138,7 @@ get_header();
       </div>
       <div class="feature-card">
         <h3>Group dining</h3>
-        <p class="muted">For larger bookings or private areas, email <a href="mailto:events@travelfinderhunter.com">events@travelfinderhunter.com</a> with your date, time, and headcount. We can pair food with gaming lessons or poker buy-ins.</p>
+        <p class="muted">For larger bookings or private areas, email <a href="mailto:support@travelfinderhunter.com">support@travelfinderhunter.com</a> with your date, time, and headcount. We can pair food with gaming lessons or poker buy-ins.</p>
       </div>
     </div>
   </section>

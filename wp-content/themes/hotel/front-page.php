@@ -109,7 +109,7 @@ get_header();
         </ul>
         <div class="hero-actions">
           <a class="btn primary" href="#visit">Check opening hours</a>
-          <a class="btn ghost" href="mailto:events@travelfinderhunter.com">Book a table</a>
+          <a class="btn ghost" href="mailto:support@travelfinderhunter.com">Book a table</a>
         </div>
       </div>
       <div class="feature-card">

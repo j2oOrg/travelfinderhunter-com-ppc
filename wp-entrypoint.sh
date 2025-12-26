@@ -16,7 +16,7 @@ fi
 SITE_TITLE=${WP_SITE_TITLE:-${SITE_TITLE:-travelfinderhunter}}
 ADMIN_USER=${WP_ADMIN_USER:-${ADMIN_USER:-admin}}
 ADMIN_PASSWORD=${WP_ADMIN_PASSWORD:-${ADMIN_PASSWORD:-changeme}}
-ADMIN_EMAIL=${WP_ADMIN_EMAIL:-${ADMIN_EMAIL:-admin@example.com}}
+ADMIN_EMAIL=${WP_ADMIN_EMAIL:-${ADMIN_EMAIL:-support@travelfinderhunter.com}}
 SITE_URL=${WP_SITE_URL:-${SITE_URL:-https://travelfinderhunter.com}}
 PLUGIN_DROP_DIR=${WP_PLUGIN_DROP_DIR:-/usr/src/wordpress/wp-plugins}
 
@@ -126,6 +126,27 @@ ensure_page() {
   fi
 }
 
+ensure_page_with_content() {
+  local slug="$1"
+  local title="$2"
+  local template="$3"
+  local content="$4"
+  local id
+  local existing_content
+  id=$(wp --path=/var/www/html --allow-root post list --post_type=page --name="$slug" --format=ids)
+  if [ -z "$id" ]; then
+    id=$(wp --path=/var/www/html --allow-root post create --post_type=page --post_status=publish --post_title="$title" --post_name="$slug" --post_content="$content" --porcelain)
+  else
+    existing_content=$(wp --path=/var/www/html --allow-root post get "$id" --field=post_content || true)
+    if [ -z "${existing_content//[[:space:]]/}" ]; then
+      wp --path=/var/www/html --allow-root post update "$id" --post_content="$content" || true
+    fi
+  fi
+  if [ -n "$template" ]; then
+    wp --path=/var/www/html --allow-root post meta update "$id" _wp_page_template "$template" || true
+  fi
+}
+
 ensure_category() {
   local slug="$1"
   local name="$2"
@@ -160,7 +181,63 @@ ensure_post() {
 
 ensure_page "rules" "Rules" "page-rules.php"
 ensure_page "faq" "FAQ" "page-faq.php"
-ensure_page "privacy-policy" "Privacy Policy" "page-privacy-policy.php"
+
+privacy_policy_content=$(cat <<'EOF'
+<p>Effective date: 2025-01-01</p>
+<p>Travel Finder Hunter ("we", "us") respects your privacy. This policy explains what we collect and how we use it.</p>
+<h2>Information we collect</h2>
+<ul>
+  <li>Contact details you submit, such as email.</li>
+  <li>Search queries and preferences like dates, destinations, and filters.</li>
+  <li>Technical data such as IP address, device, and browser.</li>
+</ul>
+<h2>How we use information</h2>
+<ul>
+  <li>Provide search results and hotel deals.</li>
+  <li>Improve site performance and personalization.</li>
+  <li>Send updates if you opt in.</li>
+</ul>
+<h2>Cookies</h2>
+<p>We use cookies and similar technologies to remember settings and measure traffic.</p>
+<h2>Sharing</h2>
+<p>We may share data with service providers that help us operate the site. We do not sell personal data.</p>
+<h2>Data retention</h2>
+<p>We keep data only as long as needed for the purposes above.</p>
+<h2>Your choices</h2>
+<p>You can request access or deletion of your data by emailing support@travelfinderhunter.com.</p>
+<h2>Third-party links</h2>
+<p>Our site links to third-party booking sites. Their policies apply when you leave our site.</p>
+<h2>Updates</h2>
+<p>We may update this policy. The latest version will be posted here.</p>
+<p>Contact: support@travelfinderhunter.com</p>
+EOF
+)
+
+terms_content=$(cat <<'EOF'
+<p>Effective date: 2025-01-01</p>
+<p>These terms govern your use of Travel Finder Hunter. By using this site you agree to them.</p>
+<h2>Use of the site</h2>
+<ul>
+  <li>Use the site for lawful purposes only.</li>
+  <li>Do not attempt to disrupt or misuse the service.</li>
+</ul>
+<h2>Hotel data and pricing</h2>
+<p>Prices and availability are provided by partners and may change without notice.</p>
+<h2>Bookings and third-party sites</h2>
+<p>Bookings are completed on third-party sites. We are not responsible for their services or policies.</p>
+<h2>Content</h2>
+<p>All content is provided as-is and may change at any time.</p>
+<h2>Limitation of liability</h2>
+<p>To the fullest extent allowed by law, we are not liable for indirect or consequential damages.</p>
+<h2>Changes</h2>
+<p>We may update these terms. Continued use means acceptance of the updated terms.</p>
+<h2>Contact</h2>
+<p>Questions can be sent to support@travelfinderhunter.com.</p>
+EOF
+)
+
+ensure_page_with_content "privacy-policy" "Privacy Policy" "page-privacy-policy.php" "$privacy_policy_content"
+ensure_page_with_content "terms-and-conditions" "Terms and Conditions" "" "$terms_content"
 
 guide_category_id=$(ensure_category "travel-guides" "Travel Guides")
 

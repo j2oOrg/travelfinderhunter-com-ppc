@@ -32,7 +32,7 @@ get_header();
       <p class="section-sub-p0c6"><strong>travelfinderhunter</strong> is provided “as-is.” We are not liable for direct, indirect, incidental, or consequential damages arising from use or inability to use the site.</p>
 
       <h3 class="subheading-c8q2">8. Updates</h3>
-      <p class="section-sub-p0c6">We may revise these terms as the platform evolves. Continued use after updates indicates acceptance of the latest version. Questions can be directed to <a href="mailto:hello@travelfinderhunter.com" class="link-accent-m8q5">hello@travelfinderhunter.com</a>.</p>
+      <p class="section-sub-p0c6">We may revise these terms as the platform evolves. Continued use after updates indicates acceptance of the latest version. Questions can be directed to <a href="mailto:support@travelfinderhunter.com" class="link-accent-m8q5">support@travelfinderhunter.com</a>.</p>
     </div>
   </div>
 </section>

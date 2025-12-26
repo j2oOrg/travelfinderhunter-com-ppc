@@ -6,7 +6,7 @@
       <p class="muted">English-language concierge for gaming, dining, and events.</p>
       <ul class="contact-list">
         <li><i class="fa-solid fa-phone"></i> <a href="tel:+358600550124">+358 600 550 124</a></li>
-        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@travelfinderhunter.com">info@travelfinderhunter.com</a></li>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:support@travelfinderhunter.com">support@travelfinderhunter.com</a></li>
         <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Casino+Helsinki" target="_blank" rel="noopener noreferrer">Mikonkatu 19, Helsinki</a></li>
       </ul>
     </div>
