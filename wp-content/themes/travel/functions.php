@@ -45,6 +45,81 @@ add_filter('body_class', function ($classes) {
     return $classes;
 });
 
+function travel_get_path_owner($path) {
+    if (!$path || !file_exists($path)) {
+        return 'missing';
+    }
+
+    $owner = @fileowner($path);
+    if ($owner === false) {
+        return 'unknown';
+    }
+
+    if (function_exists('posix_getpwuid')) {
+        $info = @posix_getpwuid($owner);
+        if (is_array($info) && isset($info['name'])) {
+            return $owner . ' (' . $info['name'] . ')';
+        }
+    }
+
+    return (string) $owner;
+}
+
+add_action('admin_notices', function () {
+    if (!current_user_can('manage_options')) {
+        return;
+    }
+
+    global $pagenow;
+    if (!in_array($pagenow, ['upload.php', 'media-new.php'], true)) {
+        return;
+    }
+
+    $uploads = wp_get_upload_dir();
+    $paths = [
+        'uploads base' => $uploads['basedir'],
+        'uploads current' => $uploads['path'],
+        'wp-content' => WP_CONTENT_DIR,
+    ];
+
+    $tmp = ini_get('upload_tmp_dir');
+    if (!$tmp) {
+        $tmp = sys_get_temp_dir();
+    }
+    $paths['php temp'] = $tmp;
+
+    $rows = [];
+    $has_issue = false;
+
+    foreach ($paths as $label => $path) {
+        $exists = $path && file_exists($path);
+        $writable = $exists && is_writable($path);
+        if (!$writable) {
+            $has_issue = true;
+        }
+
+        $perms = $exists ? substr(sprintf('%04o', fileperms($path) & 07777), -4) : '----';
+        $owner = travel_get_path_owner($path);
+
+        $rows[] = sprintf(
+            '%s: %s, perms %s, owner %s',
+            $label,
+            $writable ? 'writable' : 'not writable',
+            $perms,
+            $owner
+        );
+    }
+
+    $class = $has_issue ? 'notice notice-error' : 'notice notice-info';
+
+    echo '<div class="' . esc_attr($class) . '">';
+    echo '<p><strong>Uploads permissions check:</strong></p><ul>';
+    foreach ($rows as $row) {
+        echo '<li>' . esc_html($row) . '</li>';
+    }
+    echo '</ul></div>';
+});
+
 function travel_fallback_menu() {
     $exclude_ids = [];
     foreach (['faq', 'rules', 'sample-page', 'terms', 'terms-and-conditions'] as $slug) {

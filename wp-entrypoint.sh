@@ -68,6 +68,11 @@ mkdir -p /var/www/html/wp-content/upgrade
 chown -R www-data:www-data /var/www/html/wp-content/upgrade || true
 chmod -R 775 /var/www/html/wp-content/upgrade || true
 
+# Ensure media uploads directory exists and is writable for the web server.
+mkdir -p /var/www/html/wp-content/uploads
+chown -R www-data:www-data /var/www/html/wp-content/uploads || true
+chmod -R 775 /var/www/html/wp-content/uploads || true
+
 # Auto-generate wp-config.php if missing.
 if [ ! -f "/var/www/html/wp-config.php" ]; then
     echo "Generating wp-config.php..."
