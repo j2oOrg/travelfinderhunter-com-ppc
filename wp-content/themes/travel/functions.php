@@ -65,6 +65,103 @@ function travel_get_path_owner($path) {
     return (string) $owner;
 }
 
+function travel_get_permissions_target() {
+    $uid = @fileowner(WP_CONTENT_DIR);
+    $gid = @filegroup(WP_CONTENT_DIR);
+
+    $uid = $uid === false ? null : $uid;
+    $gid = $gid === false ? null : $gid;
+
+    if (($uid === null || $gid === null) && function_exists('posix_getpwnam')) {
+        $info = @posix_getpwnam('www-data');
+        if (is_array($info)) {
+            if ($uid === null && isset($info['uid'])) {
+                $uid = $info['uid'];
+            }
+            if ($gid === null && isset($info['gid'])) {
+                $gid = $info['gid'];
+            }
+        }
+    }
+
+    return ['uid' => $uid, 'gid' => $gid];
+}
+
+function travel_fix_uploads_permissions() {
+    $uploads = wp_get_upload_dir();
+    $targets = array_filter(array_unique([$uploads['basedir'], $uploads['path']]));
+    $owner = travel_get_permissions_target();
+
+    $report = [
+        'paths' => 0,
+        'created' => 0,
+        'missing' => 0,
+        'chmod_fail' => 0,
+        'chown_fail' => 0,
+        'chgrp_fail' => 0,
+    ];
+
+    foreach ($targets as $target) {
+        if (!file_exists($target)) {
+            if (wp_mkdir_p($target)) {
+                $report['created']++;
+            } else {
+                $report['missing']++;
+                continue;
+            }
+        }
+
+        $report['paths']++;
+
+        if (!@chmod($target, 0775)) {
+            $report['chmod_fail']++;
+        }
+        if ($owner['uid'] !== null && !@chown($target, $owner['uid'])) {
+            $report['chown_fail']++;
+        }
+        if ($owner['gid'] !== null && !@chgrp($target, $owner['gid'])) {
+            $report['chgrp_fail']++;
+        }
+    }
+
+    $is_writable = true;
+    foreach ($targets as $target) {
+        if (!is_writable($target)) {
+            $is_writable = false;
+            break;
+        }
+    }
+
+    $message = $is_writable
+        ? 'Uploads directories are writable.'
+        : 'Uploads directory is still not writable. The server user may not have permission to change ownership.';
+
+    return [
+        'status' => $is_writable ? 'success' : 'warning',
+        'message' => $message,
+        'report' => $report,
+    ];
+}
+
+add_action('admin_post_travel_fix_uploads_permissions', function () {
+    if (!current_user_can('manage_options')) {
+        wp_die(__('You do not have permission to run this action.', 'travel'));
+    }
+
+    check_admin_referer('travel_fix_uploads_permissions');
+
+    $result = travel_fix_uploads_permissions();
+    set_transient('travel_uploads_fix_notice', $result, 30);
+
+    $redirect = wp_get_referer();
+    if (!$redirect) {
+        $redirect = admin_url('upload.php');
+    }
+
+    wp_safe_redirect($redirect);
+    exit;
+});
+
 add_action('admin_notices', function () {
     if (!current_user_can('manage_options')) {
         return;
@@ -73,6 +170,15 @@ add_action('admin_notices', function () {
     global $pagenow;
     if (!in_array($pagenow, ['upload.php', 'media-new.php'], true)) {
         return;
+    }
+
+    $fix_notice = get_transient('travel_uploads_fix_notice');
+    if ($fix_notice) {
+        delete_transient('travel_uploads_fix_notice');
+        $status = $fix_notice['status'] === 'success' ? 'notice notice-success' : 'notice notice-warning';
+        echo '<div class="' . esc_attr($status) . '">';
+        echo '<p><strong>Uploads permissions:</strong> ' . esc_html($fix_notice['message']) . '</p>';
+        echo '</div>';
     }
 
     $uploads = wp_get_upload_dir();
@@ -117,7 +223,15 @@ add_action('admin_notices', function () {
     foreach ($rows as $row) {
         echo '<li>' . esc_html($row) . '</li>';
     }
-    echo '</ul></div>';
+    echo '</ul>';
+    if ($has_issue) {
+        echo '<form method="post" action="' . esc_url(admin_url('admin-post.php')) . '">';
+        wp_nonce_field('travel_fix_uploads_permissions');
+        echo '<input type="hidden" name="action" value="travel_fix_uploads_permissions">';
+        submit_button(__('Fix permissions', 'travel'), 'secondary', 'submit', false);
+        echo '</form>';
+    }
+    echo '</div>';
 });
 
 function travel_fallback_menu() {

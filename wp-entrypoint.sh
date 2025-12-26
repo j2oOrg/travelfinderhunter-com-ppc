@@ -507,6 +507,9 @@ if [ "${WP_INSTALL_FILEBIRD:-1}" = "0" ]; then
     fi
 fi
 
+# Final permissions pass after wp-cli actions (helps with bind mounts).
+chown -R www-data:www-data /var/www/html/wp-content/uploads /var/www/html/wp-content/upgrade || true
+chmod -R 775 /var/www/html/wp-content/uploads /var/www/html/wp-content/upgrade || true
 
 
 # Hand off to the original WordPress entrypoint (starts Apache/PHP).
