@@ -236,7 +236,7 @@ terms_content=$(cat <<'EOF'
 EOF
 )
 
-ensure_page_with_content "privacy-policy" "Privacy Policy" "page-privacy-policy.php" "$privacy_policy_content"
+ensure_page_with_content "privacy-policy" "Privacy Policy" "" "$privacy_policy_content"
 ensure_page_with_content "terms-and-conditions" "Terms and Conditions" "" "$terms_content"
 
 guide_category_id=$(ensure_category "travel-guides" "Travel Guides")

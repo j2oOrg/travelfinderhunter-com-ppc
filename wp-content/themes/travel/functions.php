@@ -47,7 +47,7 @@ add_filter('body_class', function ($classes) {
 
 function travel_fallback_menu() {
     $exclude_ids = [];
-    foreach (['faq', 'rules', 'sample-page'] as $slug) {
+    foreach (['faq', 'rules', 'sample-page', 'terms', 'terms-and-conditions'] as $slug) {
         $page = get_page_by_path($slug);
         if ($page) {
             $exclude_ids[] = $page->ID;
